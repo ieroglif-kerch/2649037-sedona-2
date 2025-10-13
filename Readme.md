@@ -2,6 +2,7 @@
 
 * Студент: [Егор Сапов-Рейнгард](https://up.htmlacademy.ru/htmlcss-individual/2/user/2649037).
 * Наставник: `Неизвестно`.
+* Сайт: [Седона](https://ieroglif-kerch.github.io/2649037-sedona-2/)
 
 ---
 
