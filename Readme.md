@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
-* Студент: [Егор Сапов-Рейнгард](https://up.htmlacademy.ru/htmlcss-individual/2/user/2649037).
-* Наставник: `Неизвестно`.
-* Сайт: [Седона](https://ieroglif-kerch.github.io/2649037-sedona-2/)
+* Студент: [Георгий Рейнгард](https://up.htmlacademy.ru/htmlcss-individual/2/user/2649037).
+* Наставник: [Александр Козюков](https://htmlacademy.ru/profile/id1119885).
+* Сайт: [Седона](https://ieroglif-kerch.github.io/2649037-sedona-2/).
 
 ---
 
