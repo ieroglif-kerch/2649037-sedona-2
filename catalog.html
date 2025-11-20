@@ -10,7 +10,7 @@
     <header class="page__header">
 
       <a href="#" class="logo__link">
-        <img src="index.html" alt="город Cедония" class="city__logo">
+        <img src="index.html" alt="город Cедона" class="city__logo">
       </a>
 
       <nav class="navigation">
@@ -22,7 +22,7 @@
             <a href="#" class="navigation__link">О Cедоне</a>
           </li>
           <li class="navigation__item">
-            <a href="catalog.html" class="navigation__link">Гостиницы</a>
+            <a href="catalog.html" class="navigation__link navigation__link__active" aria-current="page">Гостиницы</a>
           </li>
         </ul>
 
@@ -46,8 +46,8 @@
     </header>
 
     <main>
-      <header class="catalog__header">
-        <h1 class="catalog__header__title">Гостиницы Седоны</h1>
+      <section class="main__banner">
+        <h1 class="catalog__banner__title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
             <a href="index.html" class="breadcrumbs__link">
@@ -55,16 +55,14 @@
             </a>
           </li>
           <li class="breadcrumbs__item">
-            <a href="catalog.html" class="breadcrumbs__link" aria-current="page">
+            <span class="breadcrumbs__link breadcrumbs__link__current">
               Гостиницы
-            </a>
+            </span>
           </li>
         </ul>
-      </header>
 
-      <section class="catalog__filter">
         <h2 class="visually__hiden">Фильтр подбора жилья</h2>
-        <form class="catalog__filter__form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog__filter__form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="infrastructure">
             <legend class="filter__title">Инфраструктура:</legend>
             <ul class="infrastructure__list">
@@ -117,119 +115,141 @@
           <button class="button button__reset" type="reset">Сбросить</button>
         </form>
       </section>
-      <section class="hotel__preview">
-        <h2 class="visually__hiden">Настройка списка и сортировка отелей</h2>
-        <p>Найдено гостиниц: <span class="hotels_found">38</span></p>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="popular">Сначала популярное</option>
-          <option value="cheap" selected>Сначала дешёвое</option>
-          <option value="expensive">Сначала дорогое</option>
-        </select>
 
-        <ul class="view__control" aria-label="настройка вида списка">
-          <li class="view__control__item">
-            <input class="view__control__input" type="radio" name="view__control" id="small" value="small" checked>
-            <label for="small"><span class="visually__hiden">Маленькие иконки</span></label>
-          <li class="view__control__item">
-            <input class="view__control__input" type="radio" name="view__control" id="big" value="big">
-            <label for="big"><span class="visually__hiden">Больше иконки</span></label>
-          </li>
-          <li class="view__control__item">
-            <input class="view__control__input" type="radio" name="view__control" id="list" value="list">
-            <label for="list"><span class="visually__hiden">Список</span></label>
-          </li>
-        </ul>
-      </section>
+      <section class="catalog">
+        <header class="catalog__header">
+          <h2 class="visually__hiden">Настройка списка и сортировка отелей</h2>
+          <p>Найдено гостиниц: <span class="hotels_found">38</span></p>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Сначала популярное</option>
+            <option value="cheap" selected>Сначала дешёвое</option>
+            <option value="expensive">Сначала дорогое</option>
+          </select>
 
-      <section class="hotels__list">
+          <ul class="view__control" aria-label="настройка вида списка">
+            <li class="view__control__item">
+              <a href="#" class="view__control__input view__control__input__active">
+                <span class="visually__hiden">Маленькие иконки</span></a>
+            <li class="view__control__item">
+              <a href="#" class="view__control__input">
+                <span class="visually__hiden">Больше иконки</span></a>
+            </li>
+            <li class="view__control__item">
+              <a href="#" class="view__control__input">
+                <span class="visually__hiden">Список</span></a>
+            </li>
+          </ul>
+        </header>
+
         <h2 class="visually__hiden">Найденные гостиницы:</h2>
-        <div class="hotel__card">
-          <a href="#" class="hotel__pic"><img src="#" alt="Вид небa из ущешья"></a>
+        <ul class="hotels__list">
+          <li class="hotel__card">
+            <a href="#" class="hotel__pic"><img src="#" alt="Вид небa из ущешья"></a>
             <a href="#" class="hotel__name__link">
               <h3 class="hotel__title">Amara Resort & Spa</h3>
             </a>
-            <p class="card__hotel__type">Гостница</p>
+            <p class="card__hotel__type">Гостиница</p>
             <p class="card__hotel__price">От <b>4000</b>&#8381;</p>
-            <a class="button button__more-info">Подробнее</a>
-            <a class="button button__like">В избранное</a>
-            <img src="#" class="hotel__stars" alt="Звезд: 3">
-
+            <a href="#" class="button button__more-info">Подробнее</a>
+            <button type="button" class="button button__like">В избранное</button>
+            <div class="hotel__stars" aria-label="Звёзд у отеля:">
+              <span class="visually__hiden">4</span>
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+            </div>
             <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">8.5</span></p>
-        </div>
+          </li>
 
-        <div class="hotel__card">
-          <a href="#" class="hotel__pic"><img src="#" alt="Вид на гору дьявола"></a>
+          <li class="hotel__card">
+            <a href="#" class="hotel__pic"><img src="#" alt="Вид на гору дьявола"></a>
             <a href="#" class="hotel__name__link">
               <h3 class="hotel__title">Villas at Poco Diablo</h3>
             </a>
             <p class="card__hotel__type">Гостница</p>
             <p class="card__hotel__price">От <b>5000</b>&#8381;</p>
-            <a class="button button__more-info">Подробнее</a>
-            <a class="button button__like">В избранное</a>
-            <img src="#" class="hotel__stars" alt="Звезд: 4">
-
+            <a href="#" class="button button__more-info">Подробнее</a>
+            <button type="button" class="button button__like">В избранное</button>
+            <div class="hotel__stars" aria-label="Звёзд у отеля:">
+              <span class="visually__hiden">4</span>
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+            </div>
             <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">9.2</span></p>
-        </div>
+          </li>
 
-        <div class="hotel__card">
-          <a href="#" class="hotel__pic"><img src="#" alt="Вид пика красной горы"> </a>
+          <li class="hotel__card">
+            <a href="#" class="hotel__pic"><img src="#" alt="Вид пика красной горы"> </a>
             <a href="#" class="hotel__name__link">
               <h3 class="hotel__title">Desert Quail Inn</h3>
             </a>
             <p class="card__hotel__type">Гостница</p>
             <p class="card__hotel__price">От <b>2500</b>&#8381;</p>
-            <a class="button button__more-info">Подробнее</a>
-            <a class="button button__like">В избранное</a>
-            <img src="#" class="hotel__stars" alt="Звезд: 3">
-
+            <a href="#" class="button button__more-info">Подробнее</a>
+            <button type="button" class="button button__like">В избранное</button>
+            <div class="hotel__stars" aria-label="Звёзд у отеля:">
+              <span class="visually__hiden">3</span>
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+            </div>
             <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">6.9</span></p>
-        </div>
+          </li>
 
-        <div class="hotel__card">
-          <a href="#" class="hotel__pic"><img src="#" alt="Вид пика на фоне звездного неба"> </a>
+          <li class="hotel__card">
+            <a href="#" class="hotel__pic"><img src="#" alt="Вид пика на фоне звездного неба"> </a>
             <a href="#" class="hotel__name__link">
               <h3 class="hotel__title">GreenTree Inn</h3>
             </a>
             <p class="card__hotel__type">Гостница</p>
             <p class="card__hotel__price">От <b>1500</b>&#8381;</p>
-            <a class="button button__more-info">Подробнее</a>
-            <a class="button button__like">В избранное</a>
-            <img src="#" class="hotel__stars" alt="Звезд: 3">
-
+            <a href="#" class="button button__more-info">Подробнее</a>
+            <button type="button" class="button button__like">В избранное</button>
+            <div class="hotel__stars" aria-label="Звёзд у отеля:">
+              <span class="visually__hiden">2</span>
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+              <img src="#" class="star" alt="Звезда" aria-hidden="true">
+            </div>
             <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">8.5</span></p>
-        </div>
-      </section>
-        <section class="pagination">
+          </li>
+        </ul>
+
+        <footer class="pagination">
           <h2 class="visually__hiden">Страницы с найденными отелями</h2>
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link pagination__active">1</a>
+              <a href="#" class="pagination__link pagination__active">1</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link ">2</a>
+              <a href="#" class="pagination__link ">2</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link ">3</a>
+              <a href="#" class="pagination__link">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link ">4</a>
+              <a href="#" class="pagination__link ">4</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link pagination__disabled">...</a>
+              <span class="pagination__disabled">...</span>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link ">10</a>
+              <a href="#" class="pagination__link ">10</a>
             </li>
           </ul>
-        </section>
-        <section class="footer__newsletter">
-          <h2 class="footer__newsletter__title">Подпишитесь на рассылку</h2>
-          <form action="https://echo.htmlacademy.ru/" class="footer__newsletter__form">
-            <label for="newsletter__email">Только полезная информация и никакого спама, честное бойскаутское!</label>
-            <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
-            <button type="submit" class="button newsletter__button">Подписаться</button>
-          </form>
-        </section>
+        </footer>
+      </section>
+
+      <section class="newsletter">
+        <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
+        <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
+          <label for="newsletter__email">Только полезная информация и никакого спама, честное бойскаутское!</label>
+          <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
+          <button type="submit" class="button newsletter__button">Подписаться</button>
+        </form>
+      </section>
     </main>
 
     <footer class="page__footer">
