@@ -122,6 +122,23 @@
 
     </main>
 
+    <div class="search__window">
+      <form class="search__form" method="post">
+        <h2 class="search__form__title">Поиск гостиницы в Седоне</h2>
+        <button class="button__close"><span class="visually__hiden">Закрыть окно</span></button>
+        <label for="check-in__date">Дата заезда</label>
+        <input type="date" class="input__check-in" id="check-in__date" name="check-in" value="2020-03-27">
+        <label for="check-out__date">Дата выезда</label>
+        <input type="date" class="input__check-out" id="check-out__date" name="check-out" value="2023-09-01">
+        <label for="adult">Взрослые</label>
+        <input type="number" id="adult" class="adult__count">
+        <label for="junior">Дети</label>
+        <input type="number" id="junior" class="junior__count">
+        <button type="submit" class="button search__button__form">Найти</button>
+      </form>
+
+    </div>
+
     <footer class="page__footer">
       <section class="contacts">
         <h2 class="visually__hiden">Контакты</h2>
