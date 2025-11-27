@@ -9,8 +9,8 @@
   <body>
     <header class="page__header">
 
-      <a href="#" class="logo__link">
-        <img src="index.html" alt="город Cедона" class="city__logo">
+      <a href="index.html" class="logo__link">
+        <img src="images/icons/logo__sedona.svg" alt="город Cедона" class="city__logo" width="140" height="70">
       </a>
 
       <nav class="navigation">
@@ -48,7 +48,7 @@
     <main>
       <header class="main__header">
         <h1 class="visually__hiden">добро пожаловать в Седону</h1>
-        <img src="#" alt="вид седоны">
+        <img src="images/welcome__text.svg" width="458" height="352" alt="вид седоны">
         <h2 class="banner__title">Седона — небольшой городок в Аризоне, <br> заслуживающий большего!</h2>
         <p class="banner__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </header>
@@ -58,7 +58,7 @@
           <li>
             <h3 class="about__item__title">Настоящий городок</h3>
             <p class="about__item__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="#" alt="Вид с балкона">
+            <img src="images/balcony.jpg" width="800" height="385" alt="Вид с балкона">
           </li>
           <li>
             <h3 class="about__item__title">Небольшая площадь</h3>
@@ -73,7 +73,7 @@
             <p class="about__item__text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li>
-            <img src="#" alt="Вид на каньон">
+            <img src="images/devil__bridge.jpg" width="800" height="385"  alt="Вид на мост дьявола">
             <h3 class="about__item__title">Там есть мост дьявола</h3>
             <p class="about__item__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
@@ -88,17 +88,17 @@
 
       <ul class="advantages">
         <li>
-          <img src="#" alt="дома">
+          <img src="images/icons/advantage__house.svg" width="75" height="72" alt="домик">
           <h3 class="advantages__title">Жильё</h3>
           <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
         <li>
-          <img src="#" alt="бургер">
+          <img src="images/icons/advantage__burger.svg" width="74" height="70" alt="бургер">
           <h3 class="advantages__title">Еда</h3>
           <p class="advantages__text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
         </li>
         <li>
-          <img src="#" alt="Коробка с бантиком">
+          <img src="images/icons/advantage__box.svg" width="64" height="76" alt="Коробка с бантиком">
           <h3 class="advantages__title">Сувениры</h3>
           <p class="advantages__text">Не только китайского, но и настоящего местного производства!</p>
         </li>
@@ -126,14 +126,19 @@
       <form class="search__form" method="post">
         <h2 class="search__form__title">Поиск гостиницы в Седоне</h2>
         <button class="button__close"><span class="visually__hiden">Закрыть окно</span></button>
+
         <label for="check-in__date">Дата заезда</label>
         <input type="date" class="input__check-in" id="check-in__date" name="check-in" value="2020-03-27">
+
         <label for="check-out__date">Дата выезда</label>
         <input type="date" class="input__check-out" id="check-out__date" name="check-out" value="2023-09-01">
+
         <label for="adult">Взрослые</label>
         <input type="number" id="adult" class="adult__count">
+
         <label for="junior">Дети</label>
         <input type="number" id="junior" class="junior__count">
+        
         <button type="submit" class="button search__button__form">Найти</button>
       </form>
 
@@ -163,7 +168,7 @@
         <a href="tel:78128121212" class="telephone">+7 (812) 812-12-12</a>
 
         <a href="https://htmlacademy.ru/" class="htmlacademy__link" target="_blank">
-          <img src="#" alt="Сайт HTML академии">
+          <span class="visually__hiden"> сайт HTML академии </span>
         </a>
       </section>
     </footer>
