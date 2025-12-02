@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans-400.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url(../fonts/ptsans-700.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f2f2f2;
+}
+
+/*PAGE MAIN HEADER */
+.page__header {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.navigation__link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation__user li:last-child {
+  font-size: 16px;
+  color: #fff;
+  background-color: #756157;
+  text-transform: uppercase;
+}
+
+/*BANNER*/
+
+.banner {
+  background-color: #fff;
+}
+
+.banner__image {
+  background-image: url(../images/backgrounds/index_bacgkround_mask.svg),
+    url(../images/backgrounds/index_background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto, cover;
+  background-position: left bottom, left top;
+  background-color: #82b3d3;
+}
+
+.banner__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.banner__text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.newsletter{
+  color:#fff;
+  background-color: #82B3D3;
+  background-image: url(../images/backgrounds/subscribe_background.jpg);
+  background-size: cover;
+}
+
+/*LIST*/
+.about__sedona__list,
+.advantages__list {
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+}
+.item__light {
+  background-color: #83b3d31f;
+}
+
+.item__dark {
+  background-color: #83b3d333;
+}
+
+.about__sedona__item__image {
+  background-color: #82b3d3;
+  color: #fff;
+}
+
+.about__sedona__list .about__item__title,
+.advantages__list .advantages__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/* INPUTS */
+.button{
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #756157;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.field{
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/*FOOTER*/
+.page__footer{
+  background-color: #fff;
+}
+.social__item a{
+  background-repeat: no-repeat;
+}
+.vk__link{
+  background-image: url(../images/icons/social_vk.svg);
+}
+.telegram__link{
+  background-image: url(../images/icons/social_telegram.svg);
+}
+.youtube__link{
+  background-image: url(../images/icons/social_youtube.svg);
+}
+
+.telephone{
+  font-family: inherit;
+  color: inherit;
+  font-size: 40px;
+  text-decoration: none;
+}

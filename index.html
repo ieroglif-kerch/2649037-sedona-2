@@ -3,6 +3,9 @@
 
   <head>
     <meta charset="utf-8">
+
+     <link rel="stylesheet" href="styles/styles.css">
+
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -46,82 +49,83 @@
     </header>
 
     <main>
-      <header class="main__header">
+      <header class="main__banner banner">
         <h1 class="visually__hidden">добро пожаловать в Седону</h1>
-        <img src="images/welcome_text.svg" width="458" height="352" alt="вид седоны">
+        <div class="banner__image">
+          <img src="images/welcome_text.svg" width="458" height="352" alt="вид седоны">
+        </div>
         <h2 class="banner__title">Седона — небольшой городок в Аризоне, <br> заслуживающий большего!</h2>
         <p class="banner__text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </header>
 
-      <section class="about__sedona">
-        <ul class="about__sedona__list">
-          <li>
+      <ul class="about__sedona__list">
+          <li class="about__sedona__item__image">
             <h3 class="about__item__title">Настоящий городок</h3>
             <p class="about__item__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             <img src="images/balcony.jpg" width="800" height="385" alt="Вид с балкона">
           </li>
-          <li>
+          <li class="about__sedona__item item__light">
             <h3 class="about__item__title">Небольшая площадь</h3>
             <p class="about__item__text">Все достопримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="about__sedona__item item__dark">
             <h3 class="about__item__title">Красивая дорога</h3>
             <p class="about__item__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="about__sedona__item item__light">
             <h3 class="about__item__title">Мало туристов</h3>
             <p class="about__item__text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <li>
+          <li class="about__sedona__item__image">
             <img src="images/devil_bridge.jpg" width="800" height="385"  alt="Вид на мост дьявола">
             <h3 class="about__item__title">Там есть мост дьявола</h3>
             <p class="about__item__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
         </ul>
+
+
+      <section class="advantages__banner banner">
+        <h2 class="banner__title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p class="banner__text">Опытный персонал и качественное обслуживание!</p>
       </section>
 
-      <section class="banner">
-        <h2 class="table_title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-        <p class="table_text">Опытный персонал и качественное обслуживание!</p>
-      </section>
 
-
-      <ul class="advantages">
-        <li>
+      <ul class="advantages__list">
+        <li class="advatages__item item__dark">
           <img src="images/icons/advantage_house.svg" width="75" height="72" alt="домик">
           <h3 class="advantages__title">Жильё</h3>
           <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
-        <li>
+        <li class="advatages__item item__light">
           <img src="images/icons/advantage_burger.svg" width="74" height="70" alt="бургер">
           <h3 class="advantages__title">Еда</h3>
           <p class="advantages__text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
         </li>
-        <li>
+        <li class="advatages__item item__dark">
           <img src="images/icons/advantage_box.svg" width="64" height="76" alt="Коробка с бантиком">
           <h3 class="advantages__title">Сувениры</h3>
           <p class="advantages__text">Не только китайского, но и настоящего местного производства!</p>
         </li>
       </ul>
 
-      <section class="banner">
+      <section class="banner__interested banner">
         <h2 class="banner__title">Заинтересовались?</h2>
         <p class="banner__text">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в
           Седоне</p>
         <button type="button" class="button search__button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
       </section>
 
-      <section class="newsletter">
-        <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
+      <section class="newsletter banner">
+        <h2 class="banner__title">Подпишитесь на рассылку</h2>
         <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
-          <label for="newsletter__email">Только полезная информация и никакого спама, честное бойскаутское!</label>
+          <p class="banner__text">Только полезная информация и никакого спама, честное бойскаутское!</label>
           <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
           <button type="submit" class="button newsletter__button">Подписаться</button>
         </form>
       </section>
 
     </main>
-
+<!--
     <div class="search__window">
       <form class="search__form" method="post">
         <h2 class="search__form__title">Поиск гостиницы в Седоне</h2>
@@ -141,7 +145,7 @@
 
         <button type="submit" class="button search__button__form">Найти</button>
       </form>
-
+-->
     </div>
 
     <footer class="page__footer">
@@ -149,17 +153,17 @@
         <h2 class="visually__hidden">Контакты</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a href="https://vk.com/htmlacademy" class="social__button"  target="_blank>
+            <a href="https://vk.com/htmlacademy" class="vk__link"  target="_blank>
               <span class="visually__hidden">В контакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a href=" https://t.me/htmlacademy " class="social__button"  target="_blank>
+            <a href=" https://t.me/htmlacademy " class="telegram__link"  target="_blank>
               <span class="visually__hidden">Телеграм</span>
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/user/htmlacademyru" class="social__button"  target="_blank>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="youtube__link"  target="_blank>
               <span class="visually__hidden">Ютуб</span>
             </a>
           </li>
