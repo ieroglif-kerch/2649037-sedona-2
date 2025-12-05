@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -118,10 +118,10 @@
       </section>
 
       <section class="catalog">
-        <header class="catalog__header">
+        <header class="banner catalog__header">
           <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
-          <p>Найдено гостиниц: <span class="hotels_found">38</span></p>
-          <select class="select-control" aria-label="Сортировка">
+          <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
+          <select class="select__control" aria-label="Сортировка">
             <option value="popular">Сначала популярное</option>
             <option value="cheap" selected>Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
@@ -155,19 +155,19 @@
             <p class="card__hotel__price">От <b>4000</b>&#8381;</p>
             <a href="#" class="button button__more-info">Подробнее</a>
             <button type="button" class="button button__like">В избранное</button>
-            <div class="hotel__stars" >
+            <div class="hotel__stars">
               <span class="visually__hidden">Звёзд у отеля: 4</span>
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
             </div>
-            <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">8.5</span></p>
+            <p class="button__hotel__rating">Рейтинг:<span class="hotel__rating">8.5</span></p>
           </li>
 
           <li class="hotel__card">
             <a href="#" class="hotel__pic">
-              <img src="images/catalog/hotel_villas.jpg"  width="300" height="212" alt="Вид на гору дьявола"></a>
+              <img src="images/catalog/hotel_villas.jpg" width="300" height="212" alt="Вид на гору дьявола"></a>
             <a href="#" class="hotel__name__link">
               <h3 class="hotel__title">Villas at Poco Diablo</h3>
             </a>
@@ -182,7 +182,7 @@
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
             </div>
-            <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">9.2</span></p>
+            <p class="button__hotel__rating">Рейтинг:<span class="hotel__rating">9.2</span></p>
           </li>
 
           <li class="hotel__card">
@@ -201,12 +201,13 @@
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
             </div>
-            <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">6.9</span></p>
+            <p class="button__hotel__rating">Рейтинг:<span class="hotel__rating">6.9</span></p>
           </li>
 
           <li class="hotel__card">
             <a href="#" class="hotel__pic">
-              <img src="images/catalog/hotel_greentree.jpg" width="300" height="212" alt="Вид пика на фоне звездного неба"> </a>
+              <img src="images/catalog/hotel_greentree.jpg" width="300" height="212"
+                alt="Вид пика на фоне звездного неба"> </a>
             <a href="#" class="hotel__name__link">
               <h3 class="hotel__title">GreenTree Inn</h3>
             </a>
@@ -219,7 +220,7 @@
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
               <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
             </div>
-            <p class="button button__hotel__rating">Рейтинг:<span class="hotel__rating">8.5</span></p>
+            <p class="button__hotel__rating">Рейтинг:<span class="hotel__rating">8.5</span></p>
           </li>
         </ul>
 
@@ -248,12 +249,12 @@
         </footer>
       </section>
 
-      <section class="newsletter">
-        <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
+      <section class="newsletter banner newsletter__no__image">
+        <h2 class="banner__title">Подпишитесь на рассылку</h2>
         <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
-          <label for="newsletter__email">Только полезная информация и никакого спама, честное бойскаутское!</label>
-          <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
-          <button type="submit" class="button newsletter__button">Подписаться</button>
+          <p class="banner__text">Только полезная информация и никакого спама, честное бойскаутское!</label>
+            <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
+            <button type="submit" class="button newsletter__button">Подписаться</button>
         </form>
       </section>
     </main>
@@ -263,18 +264,18 @@
         <h2 class="visually__hidden">Контакты</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a href="https://vk.com/htmlacademy" class="social__button"  target="_blank>
-              <span class="visually__hidden">В контакте</span>
+            <a href="https://vk.com/htmlacademy" class="social__button" target="_blank>
+              <span class=" visually__hidden">В контакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a href=" https://t.me/htmlacademy " class="social__button"  target="_blank>
-              <span class="visually__hidden">Телеграм</span>
+            <a href=" https://t.me/htmlacademy " class="social__button" target="_blank>
+              <span class=" visually__hidden">Телеграм</span>
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/user/htmlacademyru" class="social__button"  target="_blank>
-              <span class="visually__hidden">Ютуб</span>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="social__button" target="_blank>
+              <span class=" visually__hidden">Ютуб</span>
             </a>
           </li>
         </ul>

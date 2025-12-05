@@ -82,6 +82,40 @@ body {
 .newsletter h2 {
   color: #fff;
 }
+.newsletter__no__image h2 {
+  color: #000;
+}
+.newsletter__no__image {
+  background-image: none;
+  background-color: #fff;
+  color: inherit;
+}
+
+/* INPUTS */
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  background-color: #756157;
+  color: #fff;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.newsletter__button {
+  background-color: #82b3d3;
+  color: #fff;
+}
+
+.field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+}
+.field::placeholder {
+  font-family: inherit;
+  color: #000;
+}
 
 /* FILTER BANNER*/
 
@@ -137,6 +171,69 @@ body {
 }
 
 /* CATALOG */
+.select__control {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+}
+.view__control,
+.hotels__list {
+  list-style: none;
+}
+/* CATALOG CARD */
+.hotels__list {
+  background-color: #fff;
+}
+.hotel__card a {
+  text-decoration: none;
+}
+
+.hotel__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+.hotel__card {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button__more-info,
+.button__like,
+.button__rating {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hotel__card .button__like {
+  background-color: #82b3d3;
+}
+.hotel__card .button__rating {
+  font-weight: 400;
+}
+
+/* PAGINATION */
+.pagination {
+  background-color: #fff;
+}
+.pagination__list {
+  list-style: none;
+}
+.pagination__link {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: white;
+  background-color: #82b3d3;
+}
+.pagination__active {
+  color: #000;
+  background-color: #f2f2f2;
+}
 
 /*LIST MAIN PAGE*/
 .about__sedona__list,
@@ -166,32 +263,6 @@ body {
   font-size: 24px;
   color: #000;
   line-height: 28px;
-}
-
-/* INPUTS */
-.button {
-  font-family: inherit;
-  font-weight: 700;
-  background-color: #756157;
-  color: #fff;
-  font-size: 20px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
-.newsletter__button {
-  background-color: #82b3d3;
-  color: #fff;
-}
-
-.field {
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  background-color: #f2f2f2;
-}
-.field::placeholder {
-  font-family: inherit;
-  color: #000;
 }
 
 /*FOOTER*/
