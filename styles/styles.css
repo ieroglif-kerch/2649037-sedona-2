@@ -17,7 +17,6 @@ body {
   font-family: "PT Sans", sans-serif;
   color: #333333;
   background-color: #f2f2f2;
-  text-align: center;
 }
 
 .body__page {
@@ -50,6 +49,7 @@ body {
 /*BANNER*/
 
 .banner {
+  text-align: center;
 }
 
 .banner__image {
@@ -60,6 +60,7 @@ body {
   background-position: left bottom, left top;
   background-color: #01ffff;
 }
+
 .banner__title {
   font-weight: 700;
   font-size: 30px;
@@ -83,9 +84,11 @@ body {
 .newsletter h2 {
   color: #fff;
 }
+
 .newsletter__no__image h2 {
   color: #000;
 }
+
 .newsletter__no__image {
   color: inherit;
   background-image: none;
@@ -133,6 +136,7 @@ body {
   line-height: 24px;
   background-color: #f2f2f2;
 }
+
 .search__field::placeholder {
   font-family: inherit;
   color: #000;
@@ -149,19 +153,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .filter__banner h1 {
   font-size: 60px;
   line-height: 78px;
 }
+
 .breadcrumbs__list {
   list-style: none;
   font-size: 16px;
   line-height: 21px;
 }
+
 .breadcrumbs__list li:first-child {
   background-image: url("../images/icons/breadcrumbs_home.svg");
   background-repeat: no-repeat;
 }
+
 .breadcrumbs__list a {
   text-decoration: none;
   color: inherit;
@@ -173,37 +181,45 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+
 .infrastructure__list,
 .accomodation__list {
   list-style: none;
 }
 
 /* CATALOG */
+
 .select__control {
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
 }
+
 .view__control,
 .hotels__list {
   list-style: none;
 }
+
 /* CATALOG CARD */
 .hotels__list {
 }
+
 .hotel__card a {
   text-decoration: none;
 }
+
 .hotel__title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000;
 }
+
 .hotel__card {
   font-size: 18px;
   line-height: 21px;
 }
+
 .price {
   font-weight: 400;
 }
@@ -211,6 +227,7 @@ body {
 .hotel__card .button__like {
   background-color: #82b3d3;
 }
+
 .hotel__card .button__rating {
   font-weight: 400;
 }
@@ -218,9 +235,11 @@ body {
 /* PAGINATION */
 .pagination {
 }
+
 .pagination__list {
   list-style: none;
 }
+
 .pagination__link {
   text-decoration: none;
   font-family: inherit;
@@ -236,11 +255,13 @@ body {
 }
 
 /*LIST MAIN PAGE*/
+
 .about__sedona__list,
 .advantages__list {
   font-size: 18px;
   line-height: 21px;
   list-style: none;
+  text-align: center;
 }
 
 .item__light {
@@ -255,6 +276,7 @@ body {
   background-color: #82b3d3;
   color: #fff;
 }
+
 .about__sedona__item__image .about__item__title {
   color: #fff;
 }
@@ -269,6 +291,7 @@ body {
 }
 
 /*FOOTER*/
+
 .page__footer {
 }
 
