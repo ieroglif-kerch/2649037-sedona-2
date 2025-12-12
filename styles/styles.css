@@ -12,27 +12,74 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  height: 100%;
+}
 
 body {
+  margin: 0;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   color: #333333;
   background-color: #f2f2f2;
 }
 
-.body__page {
+.page__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100%; /* не работает */
+  width: 1200px;
   background-color: #fff;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 /*PAGE MAIN HEADER */
+
 .page__header {
+  display: flex;
+  outline: #000;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
 }
 
-.navigation__list {
-  list-style: none;
+.logo__link {
+  display: block;
+  margin-left: 70px;
+  margin-right: 30px;
+
 }
+
+.navigation {
+  display: flex;
+
+  width: 100%;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  list-style: none;
+  display: flex;
+ flex-wrap: wrap;
+
+}
+
+.navigation__list:last-child{
+  padding-right: 70px;
+}
+
+.navigation__item{
+  padding-left: 16px;
+  padding-top: 20px;
+}
+
+
 
 .navigation__link {
   color: inherit;
@@ -45,6 +92,7 @@ body {
   color: #fff;
   background-color: #7db54f;
 }
+
 
 /*BANNER*/
 
@@ -96,6 +144,7 @@ body {
 }
 
 /* INPUTS */
+
 .button {
   font-family: inherit;
   font-weight: 700;
@@ -105,11 +154,13 @@ body {
   line-height: 20px;
   text-transform: uppercase;
 }
+
 .button__newsletter {
   background-color: #82b3d3;
   font-size: 20px;
   line-height: 36px;
 }
+
 .button__search {
   font-size: 20px;
   line-height: 36px;
@@ -258,6 +309,11 @@ body {
 
 .about__sedona__list,
 .advantages__list {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   line-height: 21px;
   list-style: none;
@@ -275,6 +331,7 @@ body {
 .about__sedona__item__image {
   background-color: #82b3d3;
   color: #fff;
+  width: 100%;
 }
 
 .about__sedona__item__image .about__item__title {
@@ -290,12 +347,26 @@ body {
   text-transform: uppercase;
 }
 
+.advantages__item,
+.about__sedona__item{
+  flex-grow: 1;
+  flex-basis: 385px;
+  min-height: 400px;
+}
+
+
 /*FOOTER*/
 
 .page__footer {
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .social__list {
+  display: flex;
+
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -316,6 +387,7 @@ body {
 }
 
 .telephone {
+
   font-family: inherit;
   color: #000;
   font-size: 40px;
@@ -324,6 +396,7 @@ body {
 }
 
 .htmlacademy__link {
+
   background-image: url("../images/icons/logo_htmlacademy.svg");
   background-repeat: no-repeat;
 }
