@@ -28,7 +28,7 @@
             </li>
           </ul>
 
-          <ul class="navigation__list navigation__user">
+          <ul class="navigation__list navigation__user__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">
                 <span class="visually__hidden">Поиск</span>
@@ -102,7 +102,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="price">
+            <fieldset class="price__range__fieldset">
               <legend class="filter__title">Стоимость, &#8381;:</legend>
               <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
               <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min">
@@ -112,9 +112,11 @@
               <label for="price__input__max">до</label>
             </fieldset>
 
-            <button class="button button__apply" type="submit">Применить</button>
+            <div class="filter__buttons__container">
+             <button class="button button__apply" type="submit">Применить</button>
 
-            <button class="button button__reset" type="reset">Сбросить</button>
+             <button class="button button__reset" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
 
@@ -261,7 +263,6 @@
       </main>
 
       <footer class="page__footer">
-
           <h2 class="visually__hidden">Контакты</h2>
           <ul class="social__list">
             <li class="social__item">
@@ -286,7 +287,6 @@
           <a href="https://htmlacademy.ru/" class="htmlacademy__link" target="_blank">
             <span class="visually__hidden"> сайт HTML академии </span>
           </a>
-
       </footer>
     </div>
   </body>
