@@ -72,12 +72,12 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .navigation__link {
   display: block;
-  padding-left: 16px;
-  padding-top: 20px;
+  padding: 20px 16px;
   color: inherit;
   text-decoration: none;
 }
@@ -87,10 +87,6 @@ body {
   line-height: 10px;
   color: #fff;
   background-color: #7db54f;
-}
-
-.navigation__user__list li:last-child{
- 
 }
 
 /*BANNER*/
@@ -280,8 +276,8 @@ body {
 }
 
 /* CATALOG */
-.main__catalog{
-  padding: 0 70px
+.main__catalog {
+  padding: 0 70px;
 }
 
 .catalog__header {
@@ -310,7 +306,8 @@ body {
 
 .hotels__list {
   margin: 0;
-  padding: 0 0 40px 0;
+  margin-bottom: 40px;
+  padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -376,8 +373,8 @@ body {
   background-color: #f2f2f2;
 }
 
-.pagination__disabled{
-  color:#000;
+.pagination__disabled {
+  color: #000;
   background-color: #fff;
 }
 
