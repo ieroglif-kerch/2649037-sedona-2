@@ -17,6 +17,17 @@
   box-sizing: border-box;
 }
 
+.visually__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   min-height: 100%;
 }
@@ -89,13 +100,25 @@ body {
   background-color: #7db54f;
 }
 
-/*BANNER*/
+.navigation__user__list li {
+  min-width: 44px;
+}
+
+.navigation__button{
+  margin:  16px 0 16px 20px;
+  padding: 8px 34px;
+  text-decoration: none;
+
+}
+
+/* ------------------------------BANNER----------------------*/
 
 .banner {
   text-align: center;
 }
 
 .banner__image {
+  padding: 50px 70px 80px;
   background-image: url(../images/backgrounds/index_bacgkround_mask.svg),
     url(../images/backgrounds/index_background.jpg);
   background-repeat: no-repeat;
@@ -116,6 +139,7 @@ body {
   font-size: 22px;
   line-height: 26px;
 }
+
 .main__banner__container {
   padding: 70px;
 }
@@ -150,7 +174,7 @@ body {
   color: #000;
 }
 
-/* INPUTS */
+/* ------------------------------INPUTS--------------------- */
 
 .button {
   font-family: inherit;
@@ -200,7 +224,7 @@ body {
   color: #000;
 }
 
-/* FILTER BANNER*/
+/* ------------------------------FILTER BANNER------------------------------*/
 
 .filter__banner {
   margin: 0;
@@ -216,6 +240,7 @@ body {
 
 .filter__banner h1 {
   margin: 0;
+  padding: 0;
   font-size: 60px;
   line-height: 78px;
 }
@@ -224,12 +249,16 @@ body {
   margin: 0 0 40px 0;
   padding: 0;
   display: flex;
+  align-items: center;
   list-style: none;
   font-size: 16px;
   line-height: 21px;
 }
 
 .breadcrumbs__list li:first-child {
+  min-height: 15px;
+  min-width: 13px;
+  margin-right: 28px;
   background-image: url("../images/icons/breadcrumbs_home.svg");
   background-repeat: no-repeat;
 }
@@ -243,7 +272,7 @@ body {
   min-width: 13px;
 }
 
-/* FILTER FORM */
+/* ------------------------------FILTER FORM ------------------------------*/
 
 .filter__form {
   display: flex;
@@ -275,7 +304,7 @@ body {
   flex-direction: column;
 }
 
-/* CATALOG */
+/* ------------------------------CATALOG ------------------------------*/
 .main__catalog {
   padding: 0 70px;
 }
@@ -285,10 +314,12 @@ body {
   padding: 50px 0 40px 0;
   display: flex;
   align-items: center;
+  gap: 70px;
 }
 
 .select__control {
   margin: 0;
+  margin-left: auto;
   padding: 0;
   min-width: 200px;
   font-family: inherit;
@@ -296,12 +327,22 @@ body {
   line-height: 21px;
 }
 
-.view__control {
+.view__control__list{
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: right;
   list-style: none;
+}
+
+.view__control__item{
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: 8px;
+}
+
+.view__control__list li:last-child {
+  margin-right: 0;
 }
 
 .hotels__list {
@@ -344,7 +385,7 @@ body {
   font-weight: 400;
 }
 
-/* PAGINATION */
+/* ------------------------------PAGINATION------------------------------ */
 
 .pagination__list {
   display: flex;
@@ -378,10 +419,11 @@ body {
   background-color: #fff;
 }
 
-/*LIST MAIN PAGE*/
+/* ------------------------------LIST MAIN PAGE ------------------------------*/
 
 .about__sedona__list,
 .advantages__list {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -447,7 +489,7 @@ body {
   margin: 0;
 }
 
-/*FOOTER*/
+/* ------------------------------FOOTER ------------------------------*/
 
 .page__footer {
   padding: 40px 70px 30px;
@@ -457,12 +499,18 @@ body {
 }
 
 .social__list {
+  padding: 0;
+  margin: 0;
+  max-width: 240px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
 
 .social__item a {
+  display: block;
+  min-height: 40px;
+  min-width: 47px;
   background-repeat: no-repeat;
 }
 
@@ -487,6 +535,8 @@ body {
 }
 
 .htmlacademy__link {
+  min-width: 115px;
+  min-height: 33px;
   background-image: url("../images/icons/logo_htmlacademy.svg");
   background-repeat: no-repeat;
 }
