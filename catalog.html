@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="body__page">
+    <div class="page__container">
       <header class="page__header">
 
         <a href="#" class="logo__link">
@@ -28,7 +28,7 @@
             </li>
           </ul>
 
-          <ul class="navigation__list navigation__user">
+          <ul class="navigation__list navigation__user__list">
             <li class="navigation__item">
               <a href="#" class="navigation__link">
                 <span class="visually__hidden">Поиск</span>
@@ -41,7 +41,7 @@
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">ХОЧУ СЮДА!</a>
+              <a href="#" class="button">ХОЧУ СЮДА!</a>
             </li>
           </ul>
         </nav>
@@ -102,7 +102,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="price">
+            <fieldset class="price__range__fieldset">
               <legend class="filter__title">Стоимость, &#8381;:</legend>
               <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
               <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min">
@@ -112,13 +112,15 @@
               <label for="price__input__max">до</label>
             </fieldset>
 
-            <button class="button button__apply" type="submit">Применить</button>
+            <div class="filter__buttons__container">
+              <button class="button button__apply" type="submit">Применить</button>
 
-            <button class="button button__reset" type="reset">Сбросить</button>
+              <button class="button button__reset" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
 
-        <section class="catalog">
+        <section class="main__catalog">
           <header class="catalog__header">
             <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
             <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
@@ -241,7 +243,7 @@
                 <a href="#" class="pagination__link">4</a>
               </li>
               <li class="pagination__item">
-                <span class="pagination__disabled">...</span>
+                <span class="pagination__link pagination__disabled">...</span>
               </li>
               <li class="pagination__item">
                 <a href="#" class="pagination__link ">10</a>
@@ -261,32 +263,30 @@
       </main>
 
       <footer class="page__footer">
-        <section class="contacts">
-          <h2 class="visually__hidden">Контакты</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="https://vk.com/htmlacademy" class="social__button" target="_blank">
-                <span class=" visually__hidden">В контакте</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href=" https://t.me/htmlacademy " class="social__button" target="_blank">
-                <span class=" visually__hidden">Телеграм</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="https://www.youtube.com/user/htmlacademyru" class="social__button" target="_blank">
-                <span class=" visually__hidden">Ютуб</span>
-              </a>
-            </li>
-          </ul>
+        <h2 class="visually__hidden">Контакты</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="https://vk.com/htmlacademy" class="social__button" target="_blank">
+              <span class=" visually__hidden">В контакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href=" https://t.me/htmlacademy " class="social__button" target="_blank">
+              <span class=" visually__hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.youtube.com/user/htmlacademyru" class="social__button" target="_blank">
+              <span class=" visually__hidden">Ютуб</span>
+            </a>
+          </li>
+        </ul>
 
-          <a href="tel:78128121212" class="telephone">+7 (812) 812-12-12</a>
+        <a href="tel:78128121212" class="telephone">+7 (812) 812-12-12</a>
 
-          <a href="https://htmlacademy.ru/" class="htmlacademy__link" target="_blank">
-            <span class="visually__hidden"> сайт HTML академии </span>
-          </a>
-        </section>
+        <a href="https://htmlacademy.ru/" class="htmlacademy__link" target="_blank">
+          <span class="visually__hidden"> сайт HTML академии </span>
+        </a>
       </footer>
     </div>
   </body>
