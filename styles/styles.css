@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+
 .visually__hidden {
   position: absolute;
   width: 1px;
@@ -105,7 +109,8 @@ body {
 }
 
 .navigation__button{
-  margin:  16px 0 16px 20px;
+  display: block;
+  margin-left: 20px;
   padding: 8px 34px;
   text-decoration: none;
 
@@ -120,14 +125,19 @@ body {
 .banner__image {
   padding: 50px 70px 80px;
   background-image: url(../images/backgrounds/index_bacgkround_mask.svg),
-    url(../images/backgrounds/index_background.jpg);
+  url(../images/backgrounds/index_background.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
   background-position: left bottom, left top;
   background-color: #01ffff;
 }
 
+.banner__image img {
+  margin: 0 auto;
+}
+
 .banner__title {
+  margin: 0 0 20px 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -136,6 +146,8 @@ body {
 }
 
 .banner__text {
+  margin: 0;
+  padding: 0;
   font-size: 22px;
   line-height: 26px;
 }
@@ -227,7 +239,7 @@ body {
 /* ------------------------------FILTER BANNER------------------------------*/
 
 .filter__banner {
-  margin: 0;
+  margin-bottom: 50px;
   padding: 35px 70px;
   font-size: 18px;
   line-height: 23px;
@@ -288,7 +300,7 @@ body {
   border: none;
 }
 .infrastructure__list,
-.accomodation__list {
+.accommodation__list {
   list-style: none;
   margin: 32px 0 0 0;
   padding: 0;
@@ -309,18 +321,22 @@ body {
   padding: 0 70px;
 }
 
+/*------------------------------CATALOG HEADER---------------*/
 .catalog__header {
-  margin: 0;
-  padding: 50px 0 40px 0;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   gap: 70px;
 }
 
+.catalog__header .banner__title {
+  margin: 0;
+}
+
 .select__control {
   margin: 0;
   margin-left: auto;
-  padding: 0;
+  padding: 14px 131px 14px 20px;
   min-width: 200px;
   font-family: inherit;
   font-size: 18px;
@@ -336,9 +352,33 @@ body {
 }
 
 .view__control__item{
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
+}
+
+.view__control__item__active{
+  border: 2px solid #000;
+}
+
+.view__control__input {
+  display: block;
   min-width: 48px;
   min-height: 48px;
-  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.view__control__input__table {
+  background-image: url(../images/icons/view_table.svg);
+}
+
+.view__control__input__slideshow {
+  background-image: url(../images/icons/view_slideshow.svg);
+}
+
+.view__control__input__list {
+  background-image: url(../images/icons/view_list.svg);
 }
 
 .view__control__list li:last-child {
@@ -468,25 +508,32 @@ body {
   width: 100%;
 }
 
-.about__sedona__item__image img {
-  display: block;
-}
-
 .about__sedona__item__image .about__item__title {
   color: #fff;
 }
 
 .about__item__title,
 .advantages__title {
-  margin: 0;
+  margin: 0 0 62px 0;
   font-weight: 700;
   font-size: 24px;
   color: #000;
   line-height: 28px;
   text-transform: uppercase;
 }
-.about__sedona__item__text {
+
+.advantages__title{
+  margin-bottom: 30px;
+}
+
+.about__item__text,
+.advantages__text {
   margin: 0;
+  padding: 0;
+}
+
+.advantages__item img {
+  margin: 0 auto 30px;
 }
 
 /* ------------------------------FOOTER ------------------------------*/
@@ -501,7 +548,7 @@ body {
 .social__list {
   padding: 0;
   margin: 0;
-  max-width: 240px;
+  max-width: 235px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
