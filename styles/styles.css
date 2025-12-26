@@ -108,7 +108,7 @@ body {
   min-width: 44px;
 }
 
-.navigation__button{
+.navigation__item .navigation__button{
   display: block;
   margin-left: 20px;
   padding: 8px 34px;
@@ -172,8 +172,13 @@ body {
   background-size: cover;
 }
 
-.newsletter h2 {
+.newsletter .banner__title {
   color: #fff;
+}
+
+.newsletter .banner__text,
+.is__interested__banner .banner__text {
+  margin-bottom: 54px;
 }
 
 .newsletter__no__image {
@@ -182,13 +187,14 @@ body {
   background-color: inherit;
 }
 
-.newsletter__no__image h2 {
+.newsletter__no__image .banner__title {
   color: #000;
 }
 
 /* ------------------------------INPUTS--------------------- */
 
 .button {
+  padding: 8px 50px;
   font-family: inherit;
   font-weight: 700;
   background-color: #756157;
@@ -225,6 +231,9 @@ body {
 }
 
 .field__search {
+  min-width: 452px;
+  min-height: 50px;
+  padding: 14px 0 14px 20px;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -233,13 +242,12 @@ body {
 
 .field__search::placeholder {
   font-family: inherit;
-  color: #000;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /* ------------------------------FILTER BANNER------------------------------*/
 
 .filter__banner {
-  margin-bottom: 50px;
   padding: 35px 70px;
   font-size: 18px;
   line-height: 23px;
@@ -267,15 +275,16 @@ body {
   line-height: 21px;
 }
 
-.breadcrumbs__list li:first-child {
-  min-height: 15px;
-  min-width: 13px;
+.main__link {
   margin-right: 28px;
   background-image: url("../images/icons/breadcrumbs_home.svg");
   background-repeat: no-repeat;
 }
 
-.breadcrumbs__list a {
+.breadcrumbs__link {
+  display: block;
+  min-height: 15px;
+  min-width: 13px;
   text-decoration: none;
   color: inherit;
 }
@@ -289,36 +298,52 @@ body {
 .filter__form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
+
+.infrastructure,
+.accommodation__type,
+.price__range__fieldset {
+  margin: 0 70px 0 0;
+  padding: 0;
+  border: none;
+}
+
 .filter__title {
+  padding: 0;
+  margin:  0 0 32px 0 ;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
-.filter__form fieldset {
-  border: none;
-}
+
 .infrastructure__list,
 .accommodation__list {
   list-style: none;
-  margin: 32px 0 0 0;
   padding: 0;
 }
 
 .price__range__fieldset {
-  display: flex;
-  flex-direction: column;
+ margin-left: 70px;
+ display: flex;
+ flex-direction: column;
+ max-width: 290px;
 }
+
+.price__input {
+  width: 110px;
+}
+
 
 .filter__buttons__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 /* ------------------------------CATALOG ------------------------------*/
 .main__catalog {
-  padding: 0 70px;
+  padding: 50px 70px;
 }
 
 /*------------------------------CATALOG HEADER---------------*/

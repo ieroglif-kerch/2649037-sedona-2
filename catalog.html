@@ -52,7 +52,7 @@
           <h1 class="filter__banner__title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
-              <a href="index.html" class="breadcrumbs__link">
+              <a href="index.html" class="breadcrumbs__link main__link">
                 <span class="visually__hidden">На главную</span>
               </a>
             </li>
@@ -85,7 +85,7 @@
 
             <fieldset class="accommodation__type">
               <legend class="filter__title">Тип жилья:</legend>
-              <ul class="accomodation__list">
+              <ul class="accommodation__list">
                 <li class="accommodation__item">
                   <input class="accommodation__input" type="radio" name="accommodation__group" id="hotel" value="hotel"
                     checked>
@@ -104,12 +104,19 @@
 
             <fieldset class="price__range__fieldset">
               <legend class="filter__title">Стоимость, &#8381;:</legend>
+              <div class="price__container">
+
               <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
-              <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min">
               <label for="price__input__min">от</label>
+
               <input class="price__input" type="number" placeholder="0" id="price__input__max" value="9000">
-              <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max">
               <label for="price__input__max">до</label>
+              
+              </div>
+              <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max">
+              <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min">
+
+
             </fieldset>
 
             <div class="filter__buttons__container">
@@ -256,7 +263,7 @@
           <h2 class="banner__title">Подпишитесь на рассылку</h2>
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <p class="banner__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
+            <input class="field__search" placeholder="Ваш e-mail" type="email" name="email">
             <button type="submit" class="button button__newsletter">Подписаться</button>
           </form>
         </section>
