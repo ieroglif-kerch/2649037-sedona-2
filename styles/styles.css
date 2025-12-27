@@ -108,12 +108,11 @@ body {
   min-width: 44px;
 }
 
-.navigation__item .navigation__button{
+.navigation__item .navigation__button {
   display: block;
   margin-left: 20px;
   padding: 8px 34px;
   text-decoration: none;
-
 }
 
 /* ------------------------------BANNER----------------------*/
@@ -125,7 +124,7 @@ body {
 .banner__image {
   padding: 50px 70px 80px;
   background-image: url(../images/backgrounds/index_bacgkround_mask.svg),
-  url(../images/backgrounds/index_background.jpg);
+    url(../images/backgrounds/index_background.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
   background-position: left bottom, left top;
@@ -202,6 +201,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  border: none;
 }
 
 .button__newsletter {
@@ -221,13 +221,6 @@ body {
 
 .button__reset {
   background: transparent;
-}
-
-.rating {
-  font-weight: 400;
-  color: #333;
-  background-color: #f2f2f2;
-  text-transform: capitalize;
 }
 
 .field__search {
@@ -298,7 +291,6 @@ body {
 .filter__form {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 
 .infrastructure,
@@ -311,7 +303,7 @@ body {
 
 .filter__title {
   padding: 0;
-  margin:  0 0 32px 0 ;
+  margin: 0 0 32px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -324,16 +316,15 @@ body {
 }
 
 .price__range__fieldset {
- margin-left: 70px;
- display: flex;
- flex-direction: column;
- max-width: 290px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  max-width: 290px;
 }
 
 .price__input {
   width: 110px;
 }
-
 
 .filter__buttons__container {
   display: flex;
@@ -341,12 +332,11 @@ body {
   justify-content: center;
 }
 
-/* ------------------------------CATALOG ------------------------------*/
+/* ------------------------------CATALOG ------------------------------ */
 .main__catalog {
-  padding: 50px 70px;
+  padding: 50px 70px 60px;
 }
 
-/*------------------------------CATALOG HEADER---------------*/
 .catalog__header {
   margin-bottom: 40px;
   display: flex;
@@ -368,7 +358,7 @@ body {
   line-height: 21px;
 }
 
-.view__control__list{
+.view__control__list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -376,13 +366,13 @@ body {
   list-style: none;
 }
 
-.view__control__item{
+.view__control__item {
   margin-right: 8px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
 }
 
-.view__control__item__active{
+.view__control__item__active {
   border: 2px solid #000;
 }
 
@@ -409,10 +399,9 @@ body {
 .view__control__list li:last-child {
   margin-right: 0;
 }
-
 .hotels__list {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   padding: 0;
   list-style: none;
   display: grid;
@@ -420,21 +409,33 @@ body {
   gap: 20px;
 }
 
-/* CATALOG CARD */
+/* ------------------------------CATALOG CARD------------------------------ */
+
+.hotel__card {
+  padding: 20px;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
 
 .hotel__title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000;
 }
 
-.hotel__card {
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .hotel__card a {
+  display: block;
   text-decoration: none;
 }
 
@@ -442,12 +443,33 @@ body {
   font-weight: 400;
 }
 
-.hotel__card .button__like {
+.button__like,
+.button__rating,
+.button__more-info {
+  margin: 0;
+  padding: 8px 20px;
+  min-width: 140px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button__like {
   background-color: #82b3d3;
 }
 
-.hotel__card .button__rating {
+.button__rating {
   font-weight: 400;
+  color: #333;
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.hotel__stars {
+  padding: 10px 0;
+}
+
+.star {
+  display: inline;
 }
 
 /* ------------------------------PAGINATION------------------------------ */
@@ -461,6 +483,7 @@ body {
 
 .pagination__link {
   margin-right: 8px;
+  padding: 12px 0;
   display: block;
   width: 60px;
   height: 60px;
@@ -547,7 +570,7 @@ body {
   text-transform: uppercase;
 }
 
-.advantages__title{
+.advantages__title {
   margin-bottom: 30px;
 }
 
