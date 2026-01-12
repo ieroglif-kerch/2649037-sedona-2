@@ -33,18 +33,18 @@
 
           <ul class="navigation__list navigation__user__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">
+              <a href="#" class="navigation__link navigation__search">
                 <span class="visually__hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">
+              <a href="#" class="navigation__link navigation__heart">
                 <span class="visually__hidden">Избранных отелей</span>
                 <span class="navigation__likes">12</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="button">ХОЧУ СЮДА!</a>
+              <a href="#" class="navigation__button button">ХОЧУ СЮДА!</a>
             </li>
           </ul>
         </nav>
@@ -116,8 +116,8 @@
 
         <section class="is__interested__banner banner">
           <h2 class="banner__title">Заинтересовались?</h2>
-          <p class="banner__text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в
-            Седоне</p>
+          <p class="banner__text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц
+            в Седоне</p>
           <button type="button" class="button button__search">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
         </section>
 
@@ -125,9 +125,11 @@
           <h2 class="banner__title">Подпишитесь на рассылку</h2>
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <p class="banner__text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
-            <input class="field__search" placeholder="email@example.com" type="email" name="email"
-              id="newsletter__email">
-            <button type="submit" class="button button__newsletter">Подписаться</button>
+            <div class="newsletter__banner__container">
+              <input class="field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
+                id="newsletter__email">
+              <button type="submit" class="button button__newsletter">Подписаться</button>
+            </div>
           </form>
         </section>
 

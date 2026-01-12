@@ -29,19 +29,19 @@
           </ul>
 
           <ul class="navigation__list navigation__user__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">
+            <li class="navigation__item ">
+              <a href="#" class="navigation__link navigation__search">
                 <span class="visually__hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">
+              <a href="#" class="navigation__link navigation__heart">
                 <span class="visually__hidden">Избранных отелей</span>
                 <span class="navigation__likes">12</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="button">ХОЧУ СЮДА!</a>
+              <a href="#" class="navigation__button button">ХОЧУ СЮДА!</a>
             </li>
           </ul>
         </nav>
@@ -52,7 +52,7 @@
           <h1 class="filter__banner__title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
-              <a href="index.html" class="breadcrumbs__link">
+              <a href="index.html" class="breadcrumbs__link main__link">
                 <span class="visually__hidden">На главную</span>
               </a>
             </li>
@@ -83,20 +83,20 @@
               </ul>
             </fieldset>
 
-            <fieldset class="accomodation__type">
+            <fieldset class="accommodation__type">
               <legend class="filter__title">Тип жилья:</legend>
-              <ul class="accomodation__list">
-                <li class="accomodation__item">
-                  <input class="accomodation__input" type="radio" name="accomodation__group" id="hotel" value="hotel"
+              <ul class="accommodation__list">
+                <li class="accommodation__item">
+                  <input class="accommodation__input" type="radio" name="accommodation__group" id="hotel" value="hotel"
                     checked>
                   <label for="hotel">Гостиница</label>
-                <li class="accomodation__item">
-                  <input class="accomodation__input" type="radio" name="accomodation__group" id="motel" value="motel">
+                <li class="accommodation__item">
+                  <input class="accommodation__input" type="radio" name="accommodation__group" id="motel" value="motel">
                   <label for="motel"> Мотель </label>
                 </li>
-                <li class="accomodation__item">
-                  <input class="accomodation__input" type="radio" name="accomodation__group" id="appartment"
-                    value="appartment">
+                <li class="accommodation__item">
+                  <input class="accomodation__input" type="radio" name="accommodation__group" id="apartment"
+                    value="apartment">
                   <label for="appartment">Апартаменты</label>
                 </li>
               </ul>
@@ -104,19 +104,27 @@
 
             <fieldset class="price__range__fieldset">
               <legend class="filter__title">Стоимость, &#8381;:</legend>
-              <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
-              <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min">
-              <label for="price__input__min">от</label>
-              <input class="price__input" type="number" placeholder="0" id="price__input__max" value="9000">
+              <div class="price__container">
+
+                <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
+                <label for="price__input__min">от</label>
+
+                <input class="price__input" type="number" placeholder="0" id="price__input__max" value="9000">
+                <label for="price__input__max">до</label>
+
+              </div>
               <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max">
-              <label for="price__input__max">до</label>
+              <!--удалил что бы не рушил макет
+              <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min"> -->
+
+
             </fieldset>
 
             <div class="filter__buttons__container">
               <button class="button button__apply" type="submit">Применить</button>
-
               <button class="button button__reset" type="reset">Сбросить</button>
             </div>
+
           </form>
         </section>
 
@@ -124,22 +132,22 @@
           <header class="catalog__header">
             <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
             <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
-            <select class="select__control" aria-label="Сортировка">
+            <select class="select__control" name="hotels_sort" aria-label="Сортировка">
               <option value="popular">Сначала популярное</option>
               <option value="cheap" selected>Сначала дешёвое</option>
               <option value="expensive">Сначала дорогое</option>
             </select>
 
-            <ul class="view__control" aria-label="настройка вида списка">
-              <li class="view__control__item">
-                <a href="catalog.html?view=tile" class="view__control__input view__control__input__active">
+            <ul class="view__control__list" aria-label="настройка вида списка">
+              <li class="view__control__item  view__control__item__active">
+                <a href="catalog.html?view=tile" class="view__control__input view__control__input__table">
                   <span class="visually__hidden">Маленькие иконки</span></a>
               <li class="view__control__item">
-                <a href="catalog.html?view=card" class="view__control__input">
+                <a href="catalog.html?view=card" class="view__control__input view__control__input__slideshow">
                   <span class="visually__hidden">Больше иконки</span></a>
               </li>
               <li class="view__control__item">
-                <a href="catalog.html?view=list" class="view__control__input">
+                <a href="catalog.html?view=list" class="view__control__input view__control__input__list">
                   <span class="visually__hidden">Список</span></a>
               </li>
             </ul>
@@ -149,23 +157,29 @@
           <ul class="hotels__list">
             <li class="hotel__card">
               <a href="#" class="hotel__pic">
-                <img src="images/catalog/hotel_amara.jpg" width="300" height="212" alt="Вид небa из ущешья">
+                <img src="images/catalog/hotel_amara.jpg" width="300" height="212" alt="Вид небa из ущелья">
               </a>
               <a href="#" class="hotel__name__link">
                 <h3 class="hotel__title">Amara Resort & Spa</h3>
               </a>
-              <p class="card__hotel__type">Гостиница</p>
-              <p class="card__hotel__price">От <b class="price">4000</b>&#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
-              <div class="hotel__stars">
-                <span class="visually__hidden">Звёзд у отеля: 4</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+              <div class="card__container">
+                <p class="card__hotel__type">Гостиница</p>
+                <p class="card__hotel__price">От <b class="price">4000</b>&#8381;</p>
               </div>
-              <p class="button rating">Рейтинг: <span class="hotel__rating">8.5</span></p>
+              <div class="card__container">
+                <a href="#" class="button button__more-info">Подробнее</a>
+                <button type="button" class="button button__like">В избранное</button>
+              </div>
+              <div class="card__container">
+                <div class="hotel__stars">
+                  <span class="visually__hidden">Звёзд у отеля: 4</span>
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                </div>
+                <p class="button__rating">Рейтинг: <span class="hotel__rating">8.5</span></p>
+              </div>
             </li>
 
             <li class="hotel__card">
@@ -174,18 +188,24 @@
               <a href="#" class="hotel__name__link">
                 <h3 class="hotel__title">Villas at Poco Diablo</h3>
               </a>
-              <p class="card__hotel__type">Гостница</p>
-              <p class="card__hotel__price">От <b class="price">5000</b>&#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
-              <div class="hotel__stars">
-                <span class="visually__hidden">Звёзд у отеля: 4</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+              <div class="card__container">
+                <p class="card__hotel__type">Гостиница</p>
+                <p class="card__hotel__price">От <b class="price">5000</b>&#8381;</p>
               </div>
-              <p class="button rating">Рейтинг: <span class="hotel__rating">9.2</span></p>
+              <div class="card__container">
+                <a href="#" class="button button__more-info">Подробнее</a>
+                <button type="button" class="button button__like">В избранное</button>
+              </div>
+              <div class="card__container">
+                <div class="hotel__stars">
+                  <span class="visually__hidden">Звёзд у отеля: 4</span>
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                </div>
+                <p class="button__rating">Рейтинг: <span class="hotel__rating">9.2</span></p>
+              </div>
             </li>
 
             <li class="hotel__card">
@@ -194,17 +214,23 @@
               <a href="#" class="hotel__name__link">
                 <h3 class="hotel__title">Desert Quail Inn</h3>
               </a>
-              <p class="card__hotel__type">Гостница</p>
-              <p class="card__hotel__price">От <b class="price">2500</b>&#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
-              <div class="hotel__stars">
-                <span class="visually__hidden">Звёзд у отеля: 3</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+              <div class="card__container">
+                <p class="card__hotel__type">Гостиница</p>
+                <p class="card__hotel__price">От <b class="price">2500</b>&#8381;</p>
               </div>
-              <p class="button rating">Рейтинг: <span class="hotel__rating">6.9</span></p>
+              <div class="card__container">
+                <a href="#" class="button button__more-info">Подробнее</a>
+                <button type="button" class="button button__like">В избранное</button>
+              </div>
+              <div class="card__container">
+                <div class="hotel__stars">
+                  <span class="visually__hidden">Звёзд у отеля: 3</span>
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                </div>
+                <p class="button__rating">Рейтинг: <span class="hotel__rating">6.9</span></p>
+              </div>
             </li>
 
             <li class="hotel__card">
@@ -214,16 +240,22 @@
               <a href="#" class="hotel__name__link">
                 <h3 class="hotel__title">GreenTree Inn</h3>
               </a>
-              <p class="card__hotel__type">Гостница</p>
-              <p class="card__hotel__price">От <b class="price">1500</b>&#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
-              <div class="hotel__stars">
-                <span class="visually__hidden">Звёзд у отеля: 2</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+              <div class="card__container">
+                <p class="card__hotel__type">Гостиница</p>
+                <p class="card__hotel__price">От <b class="price">1500</b>&#8381;</p>
               </div>
-              <p class="button rating">Рейтинг: <span class="hotel__rating">8.5</span></p>
+              <div class="card__container">
+                <a href="#" class="button button__more-info">Подробнее</a>
+                <button type="button" class="button button__like">В избранное</button>
+              </div>
+              <div class="card__container">
+                <div class="hotel__stars">
+                  <span class="visually__hidden">Звёзд у отеля: 2</span>
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                  <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                </div>
+                <p class="button__rating">Рейтинг: <span class="hotel__rating">8.5</span></p>
+              </div>
             </li>
           </ul>
 
@@ -255,9 +287,12 @@
         <section class="newsletter banner newsletter__no__image">
           <h2 class="banner__title">Подпишитесь на рассылку</h2>
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
-            <p class="banner__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-            <input class="field" placeholder="email@example.com" type="email" name="email" id="newsletter__email">
-            <button type="submit" class="button button__newsletter">Подписаться</button>
+            <p class="banner__text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
+            <div class="newsletter__banner__container">
+              <input class="field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
+                id="newsletter__email">
+              <button type="submit" class="button button__newsletter">Подписаться</button>
+            </div>
           </form>
         </section>
       </main>
@@ -266,17 +301,17 @@
         <h2 class="visually__hidden">Контакты</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a href="https://vk.com/htmlacademy" class="social__button" target="_blank">
-              <span class=" visually__hidden">В контакте</span>
+            <a href="https://vk.com/htmlacademy" class="vk__link" target="_blank">
+              <span class="visually__hidden">В контакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a href=" https://t.me/htmlacademy " class="social__button" target="_blank">
+            <a href=" https://t.me/htmlacademy " class="telegram__link" target="_blank">
               <span class=" visually__hidden">Телеграм</span>
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/user/htmlacademyru" class="social__button" target="_blank">
+            <a href="https://www.youtube.com/user/htmlacademyru" class="youtube__link" target="_blank">
               <span class=" visually__hidden">Ютуб</span>
             </a>
           </li>
