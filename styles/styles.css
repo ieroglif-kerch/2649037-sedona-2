@@ -463,15 +463,19 @@ body {
   padding: 20px;
   font-size: 18px;
   line-height: 21px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr; /* что бы сработало переполнение по длинне название отеля. */
+  width: 340px;
   row-gap: 16px;
   column-gap: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #e5e5e5;
 }
 
-.card__container {
-  display: flex;
-  justify-content: space-between;
+.card__picture,
+.card__hotel__name {
+  grid-column: 1/ -1;
 }
 
 .hotel__title {
@@ -491,6 +495,10 @@ body {
   margin: 0;
 }
 
+.card__hotel__price {
+  justify-self: end;
+}
+
 .price {
   font-weight: 400;
 }
@@ -499,7 +507,7 @@ body {
 .button__rating,
 .button__more-info {
   margin: 0;
-  padding: 8px 20px;
+  padding: 8px 18px;
   min-width: 140px;
   font-size: 16px;
   text-align: center;
@@ -514,6 +522,10 @@ body {
   color: #333;
   background-color: #f2f2f2;
   text-transform: uppercase;
+}
+
+.button__liked {
+  background-color: #7db54f;
 }
 
 .hotel__stars {
