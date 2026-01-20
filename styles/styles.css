@@ -19,6 +19,7 @@
 
 img {
   display: block;
+  object-fit: cover;
 }
 
 .visually__hidden {
@@ -466,7 +467,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr; /* что бы сработало переполнение по длинне название отеля. */
-  width: 340px;
   row-gap: 16px;
   column-gap: 20px;
   border-radius: 4px;
@@ -476,6 +476,10 @@ body {
 .card__picture,
 .card__hotel__name {
   grid-column: 1/ -1;
+}
+
+.card__picture img {
+  width: 100%;
 }
 
 .hotel__title {
