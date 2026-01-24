@@ -157,6 +157,23 @@ body {
   text-decoration: none;
 }
 
+.navigation__button:not(.button__disabled):focus{
+  outline: none;
+  background-color: #615048;
+}
+
+.navigation__button:not(.button__disabled):hover{
+  background-color: #615048;
+}
+
+.navigation__button:not(.button__disabled):active{
+  color: rgba(255, 255, 255, 0.302);
+}
+
+
+
+
+
 /* ------------------------------BANNER----------------------*/
 
 .banner {
@@ -292,6 +309,11 @@ body {
 .field__newsletter::placeholder {
   font-family: inherit;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.button__disabled{
+  background-color: #E5E5E5;
+  color: #FFFFFF;
 }
 
 /* ------------------------------FILTER BANNER------------------------------*/
@@ -470,6 +492,20 @@ body {
   min-height: 48px;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 4px;
+}
+
+.view__control__input:focus {
+  border: 2px solid #68A2CA;
+  outline: none;
+}
+
+.view__control__input:hover {
+  border: 2px solid #000;
+}
+
+.view__control__input:active {
+  border: 2px solid #000;
 }
 
 .view__control__input__table {
@@ -603,14 +639,35 @@ body {
   background-color: #82b3d3;
 }
 
+.pagination__link:not(.pagination__active):not(.pagination__disabled):focus{
+  outline: none;
+  background-color: #68A2CA;
+}
+
+.pagination__link:not(.pagination__active):not(.pagination__disabled):hover {
+  background-color: #68A2CA;
+}
+
+.pagination__link:active{
+  color: rgba(255, 255, 255, 0.302);
+}
+
 .pagination__active {
   color: #000;
   background-color: #f2f2f2;
 }
 
+.pagination__active:focus {
+  outline: none;
+}
+
 .pagination__disabled {
   color: #000;
   background-color: #fff;
+}
+
+.pagination__disabled:focus {
+  outline: none;
 }
 
 /* ------------------------------LIST MAIN PAGE ------------------------------*/
