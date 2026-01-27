@@ -155,23 +155,6 @@ body {
   display: block;
   margin-left: 20px;
   padding: 8px 34px;
-  text-decoration: none;
-  transition:
-    background-color 250ms ease-in-out,
-    color 250ms ease-in-out;
-}
-
-.navigation__button:not(.button__is__disabled):focus {
-  outline: none;
-  background-color: #615048;
-}
-
-.navigation__button:not(.button__is__disabled):hover {
-  background-color: #615048;
-}
-
-.navigation__button:not(.button__is__disabled):active {
-  color: rgba(255, 255, 255, 0.302);
 }
 
 /* ------------------------------BANNER----------------------*/
@@ -280,6 +263,10 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  text-decoration: none;
+  transition:
+    background-color 250ms ease-in-out,
+    color 250ms ease-in-out;
 }
 
 .button__newsletter {
@@ -303,6 +290,77 @@ body {
   background: transparent;
 }
 
+.button__prim:not(.button__is__disabled):focus {
+  outline: none;
+  background-color: #615048;
+}
+
+.button__primary:not(.button__is__disabled):hover {
+  background-color: #615048;
+}
+
+.button__primary:not(.button__is__disabled):active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.button__second:not(.button__is__disabled):focus,
+.button__sec:not(.button__is__disabled):focus-visible {
+  outline: none;
+  background-color: #68a2ca;
+}
+
+.button__second:not(.button__is__disabled):hover {
+  background-color: #68a2ca;
+}
+
+.button__second:not(.button__is__disabled):active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.button__third:not(.button__is__disabled):focus,
+.button__third:not(.button__is__disabled):focus-visible {
+  outline: none;
+  background-color: #6c9e42;
+}
+
+.button__third:not(.button__is__disabled):hover {
+  background-color: #6c9e42;
+}
+
+.button__third:not(.button__is__disabled):active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.button__forth:not(.button__is__disabled):focus,
+.button__forth:not(.button__is__disabled):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.button__forth:not(.button__is__disabled):hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button__forth:not(.button__is__disabled):active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.button__is__disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.button__is__disabled:focus,
+.button__is__disabled:focus-visible {
+  outline: none;
+}
+
+.button__is__disabled.button__forth {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.1);
+}
+
 .field__newsletter {
   min-width: 452px;
   height: 52px;
@@ -319,17 +377,6 @@ body {
 .field__newsletter::placeholder {
   font-family: inherit;
   color: rgba(0, 0, 0, 0.6);
-}
-
-.button__is__disabled {
-  background-color: #e5e5e5;
-  color: #ffffff;
-  pointer-events: none;
-}
-
-.button__is__disabled:focus,
-button__is__disabled:focus-visible {
-  outline: none;
 }
 
 /* ------------------------------FILTER BANNER------------------------------*/
