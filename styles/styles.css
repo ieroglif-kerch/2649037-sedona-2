@@ -52,6 +52,7 @@ body {
   min-height: 100vh;
   width: 1200px;
   background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -76,7 +77,7 @@ body {
   height: 62px;
 }
 
-.city__logo{
+.city__logo {
   position: absolute;
 }
 
@@ -114,6 +115,7 @@ body {
   left: 16px;
   right: 16px;
   background-color: #756257;
+  z-index: 1;
 }
 
 .navigation__search {
@@ -143,7 +145,6 @@ body {
   color: #fff;
   background-color: #7db54f;
   border-radius: 50%;
-
 }
 
 .navigation__user__list li {
@@ -156,30 +157,22 @@ body {
   padding: 8px 34px;
   text-decoration: none;
   transition:
-  background-color
-  250ms
-  ease-in-out,
-  color
-  250ms
-  ease-in-out;
+    background-color 250ms ease-in-out,
+    color 250ms ease-in-out;
 }
 
-.navigation__button:not(.button__disabled):focus{
+.navigation__button:not(.button__is__disabled):focus {
   outline: none;
   background-color: #615048;
 }
 
-.navigation__button:not(.button__disabled):hover{
+.navigation__button:not(.button__is__disabled):hover {
   background-color: #615048;
 }
 
-.navigation__button:not(.button__disabled):active{
+.navigation__button:not(.button__is__disabled):active {
   color: rgba(255, 255, 255, 0.302);
 }
-
-
-
-
 
 /* ------------------------------BANNER----------------------*/
 
@@ -189,13 +182,23 @@ body {
 
 .banner__image {
   padding: 50px 70px 80px;
-  background-image: url(../images/backgrounds/index_bacgkround_mask.svg),
-    url(../images/backgrounds/index_background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto, cover;
-  background-position: left bottom, left top;
+  position: relative;
+  background-image: url(../images/backgrounds/index_background.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
   background-color: #01ffff;
-  color:#fff;
+  color: #fff;
+}
+
+.banner__image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 57px;
+  background-image: url(../images/backgrounds/index_bacgkround_mask.svg);
+  background-repeat: no-repeat;
 }
 
 .banner__image img {
@@ -318,9 +321,15 @@ body {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.button__disabled{
-  background-color: #E5E5E5;
-  color: #FFFFFF;
+.button__is__disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.button__is__disabled:focus,
+button__is__disabled:focus-visible {
+  outline: none;
 }
 
 /* ------------------------------FILTER BANNER------------------------------*/
@@ -347,25 +356,11 @@ body {
   margin: 0 0 40px 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   font-size: 16px;
   line-height: 21px;
-
-}
-
-.main__link {
-  background-image: url("../images/icons/breadcrumbs_home.svg");
-  background-repeat: no-repeat;
-
-}
-
-.breadcrumbs__link {
-  display: block;
-  min-height: 15px;
-  min-width: 13px;
-  text-decoration: none;
-  color: inherit;
 }
 
 .breadcrumbs__item {
@@ -373,12 +368,39 @@ body {
   margin-right: 10px;
   position: relative;
 }
+
 .breadcrumbs__item:not(:first-child) {
   padding-left: 20px;
- background-image: url("../images/icons/breadcrumbs_arrow_rigth.svg");
+  background-image: url("../images/icons/breadcrumbs_arrow_rigth.svg");
   background-repeat: no-repeat;
+  background-position: left 50%;
+}
 
+.breadcrumbs__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
+.breadcrumbs__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs__link:active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+breadcrumbs__link:focus,
+breadcrumbs__link:focus-visible {
+  outline: none;
+}
+
+.main__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ------------------------------FILTER FORM ------------------------------*/
@@ -417,13 +439,14 @@ body {
 }
 
 .price__range__fieldset {
-  margin-left: 70px;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   max-width: 290px;
 }
 
 .price__container {
+  position: relative;
   display: flex;
   gap: 2px;
   max-width: 288px;
@@ -437,6 +460,20 @@ body {
   padding: 12px 0 12px 20px;
   font-family: inherit;
   font-weight: 700;
+}
+
+.price__label {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.price__label__till {
+  right: 12px;
+}
+
+.price__label__from {
+  left: 106px;
 }
 
 .filter__buttons__container {
@@ -483,13 +520,13 @@ body {
   list-style: none;
 }
 
-.view__control__item {
+.view__control__input {
   margin-right: 8px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
 }
 
-.view__control__item__active {
+.view__control__input__active {
   border: 2px solid #000;
 }
 
@@ -503,7 +540,7 @@ body {
 }
 
 .view__control__input:focus {
-  border: 2px solid #68A2CA;
+  border: 2px solid #68a2ca;
   outline: none;
 }
 
@@ -549,7 +586,7 @@ body {
   line-height: 21px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content 1fr; /* что бы сработало переполнение по длинне название отеля. */
+  grid-template-rows: min-content 1fr;
   row-gap: 16px;
   column-gap: 20px;
   border-radius: 4px;
@@ -645,30 +682,27 @@ body {
   color: white;
   background-color: #82b3d3;
   transition:
-  background-color
-  250ms
-  ease-in-out,
-  color
-  250ms
-  ease-in-out;
+    background-color 100ms ease-in-out,
+    color 100ms ease-in-out;
 }
 
-.pagination__link:not(.pagination__active):not(.pagination__disabled):focus{
+.pagination__link:not(.pagination__active):focus {
   outline: none;
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
-.pagination__link:not(.pagination__active):not(.pagination__disabled):hover {
-  background-color: #68A2CA;
+.pagination__link:hover {
+  background-color: #68a2ca;
 }
 
-.pagination__link:active{
+.pagination__link:active {
   color: rgba(255, 255, 255, 0.302);
 }
 
 .pagination__active {
   color: #000;
   background-color: #f2f2f2;
+  pointer-events: none;
 }
 
 .pagination__active:focus {
@@ -678,6 +712,7 @@ body {
 .pagination__disabled {
   color: #000;
   background-color: #fff;
+  pointer-events: none;
 }
 
 .pagination__disabled:focus {
@@ -748,11 +783,9 @@ body {
   color: #000;
   line-height: 28px;
   text-transform: uppercase;
-
 }
 
-.about__item__title::before
-{
+.about__item__title::before {
   content: "";
   position: absolute;
   width: 60px;
@@ -760,7 +793,6 @@ body {
   bottom: -30px;
   left: calc(50% - 30px);
   background-color: rgb(from currentColor r g b / 30%);
-
 }
 
 .advantages__title {
@@ -775,6 +807,10 @@ body {
 
 .advantages__item img {
   margin: 0 auto 30px;
+}
+
+.about__item__image {
+  height: 100%;
 }
 
 /* ------------------------------FOOTER ------------------------------*/
@@ -800,62 +836,58 @@ body {
 .telephone {
   display: block;
   line-height: 0;
-  transition:
-  color
-  250ms
-  ease-in-out;
+  transition: color 100ms ease-in-out;
 }
 
 .vk__link {
-  color:#83B3D3;
+  color: #83b3d3;
 }
 
 .vk__link:hover {
-  color:#68A2CA;
+  color: #68a2ca;
 }
 
 .vk__link:focus {
-  color:#68A2CA;
+  color: #68a2ca;
   outline: none;
 }
 
 .vk__link:active {
-  color:rgba(104, 162, 202, 0.302);
+  color: rgba(104, 162, 202, 0.302);
 }
 
 .telegram__link {
-  color:#83B3D3;
+  color: #83b3d3;
 }
 
 .telegram__link:hover {
-  color:#68A2CA;
+  color: #68a2ca;
 }
 
 .telegram__link:focus {
-  color:#68A2CA;
+  color: #68a2ca;
   outline: none;
 }
 
 .telegram__link:active {
-  color:rgba(104, 162, 202, 0.302);
+  color: rgba(104, 162, 202, 0.302);
 }
 
-
 .youtube__link {
-  color:#83B3D3;
+  color: #83b3d3;
 }
 
 .youtube__link:hover {
-  color:#68A2CA;
+  color: #68a2ca;
 }
 
 .youtube__link:focus {
-  color:#68A2CA;
+  color: #68a2ca;
   outline: none;
 }
 
 .youtube__link:active {
-  color:rgba(104, 162, 202, 0.302);
+  color: rgba(104, 162, 202, 0.302);
 }
 
 .telephone {
@@ -867,7 +899,7 @@ body {
 }
 
 .telephone:hover {
-  color:#756157;
+  color: #756157;
 }
 
 .telephone:focus {
@@ -880,18 +912,18 @@ body {
 }
 
 .htmlacademy__link {
-  color:#000000;
+  color: #000000;
 }
 
 .htmlacademy__link:hover {
-  color:#756157;
+  color: #756157;
 }
 
 .htmlacademy__link:focus {
-  color:#756157;
+  color: #756157;
   outline: none;
 }
 
 .htmlacademy__link:active {
-  color:rgba(117, 97, 87, 0.302);
+  color: rgba(117, 97, 87, 0.302);
 }
