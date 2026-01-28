@@ -79,6 +79,7 @@ body {
 
 .city__logo {
   position: absolute;
+  z-index: 1;
 }
 
 .navigation {
@@ -290,7 +291,7 @@ body {
   background: transparent;
 }
 
-.button__prim:not(.button__is__disabled):focus {
+.button__primary:not(.button__is__disabled):focus {
   outline: none;
   background-color: #615048;
 }
@@ -304,7 +305,7 @@ body {
 }
 
 .button__second:not(.button__is__disabled):focus,
-.button__sec:not(.button__is__disabled):focus-visible {
+.button__second:not(.button__is__disabled):focus-visible {
   outline: none;
   background-color: #68a2ca;
 }
@@ -364,7 +365,7 @@ body {
 .field__newsletter {
   min-width: 452px;
   height: 52px;
-  padding: 14px 0 14px 20px;
+  padding: 14px 20px 14px 20px;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -450,6 +451,9 @@ breadcrumbs__link:focus-visible {
   color: inherit;
 }
 
+.link__current {
+  pointer-events: none;
+}
 /* ------------------------------FILTER FORM ------------------------------*/
 
 .filter__form {
@@ -616,6 +620,7 @@ breadcrumbs__link:focus-visible {
 }
 
 .hotels__list {
+  position: relative;
   margin: 0;
   margin-bottom: 80px;
   padding: 0;
@@ -623,6 +628,15 @@ breadcrumbs__link:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+}
+.hotels__list:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -40px;
+  height: 1px;
+  background-color: #e5e5e5;
 }
 
 /* ------------------------------CATALOG CARD------------------------------ */
@@ -863,6 +877,7 @@ breadcrumbs__link:focus-visible {
 /* ------------------------------FOOTER ------------------------------*/
 
 .page__footer {
+  margin-top: auto;
   padding: 40px 70px 30px;
   display: flex;
   justify-content: space-between;
@@ -878,66 +893,32 @@ breadcrumbs__link:focus-visible {
   list-style: none;
 }
 
-.social__item a,
+.social__link,
 .htmlacademy__link,
-.telephone {
+.phone {
   display: block;
   line-height: 0;
   transition: color 100ms ease-in-out;
 }
 
-.vk__link {
+.social__link {
   color: #83b3d3;
 }
 
-.vk__link:hover {
+.social__link:hover {
   color: #68a2ca;
 }
 
-.vk__link:focus {
+.social__link:focus {
   color: #68a2ca;
   outline: none;
 }
 
-.vk__link:active {
+.social__link:active {
   color: rgba(104, 162, 202, 0.302);
 }
 
-.telegram__link {
-  color: #83b3d3;
-}
-
-.telegram__link:hover {
-  color: #68a2ca;
-}
-
-.telegram__link:focus {
-  color: #68a2ca;
-  outline: none;
-}
-
-.telegram__link:active {
-  color: rgba(104, 162, 202, 0.302);
-}
-
-.youtube__link {
-  color: #83b3d3;
-}
-
-.youtube__link:hover {
-  color: #68a2ca;
-}
-
-.youtube__link:focus {
-  color: #68a2ca;
-  outline: none;
-}
-
-.youtube__link:active {
-  color: rgba(104, 162, 202, 0.302);
-}
-
-.telephone {
+.phone {
   font-family: inherit;
   color: #000;
   font-size: 40px;
@@ -945,16 +926,16 @@ breadcrumbs__link:focus-visible {
   text-decoration: none;
 }
 
-.telephone:hover {
+.phone:hover {
   color: #756157;
 }
 
-.telephone:focus {
+.phone:focus {
   color: #756157;
   outline: none;
 }
 
-.telephone:active {
+.phone:active {
   color: rgba(117, 97, 87, 0.302);
 }
 
