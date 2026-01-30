@@ -11,7 +11,7 @@
     <div class="page__container">
       <header class="page__header">
 
-        <a href="#" class="logo__link">
+        <a href="index.html" class="logo__link">
           <img src="images/icons/logo_sedona.svg" alt="город Cедона" class="city__logo" width="140" height="70">
         </a>
 
@@ -24,7 +24,8 @@
               <a href="#" class="navigation__link">О Cедоне</a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link navigation__link__active" aria-current="page">Гостиницы</a>
+              <a href="catalog.html" class="navigation__link navigation__link__active link__current"
+                aria-current="page">Гостиницы</a>
             </li>
           </ul>
 
@@ -41,7 +42,7 @@
               </a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__button button">ХОЧУ СЮДА!</a>
+              <a href="#" class="navigation__button button button__primary">ХОЧУ СЮДА!</a>
             </li>
           </ul>
         </nav>
@@ -54,13 +55,18 @@
             <li class="breadcrumbs__item">
               <a href="index.html" class="breadcrumbs__link main__link">
                 <span class="visually__hidden">На главную</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" fill="none">
+                  <path fill="currentColor" d="m6.5.5-6 5.8v6.2h12V6.3zm5 11h-10V6.7l5-4.8 5 4.8z" />
+                  <path fill="currentColor" d="M4.5 10.5h1V8h2v2.5h1V7h-4z" />
+                </svg>
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <span class="breadcrumbs__link breadcrumbs__link__current">
+              <a href="catalog.html" class="breadcrumbs__link link__current">
                 Гостиницы
-              </span>
+              </a>
             </li>
+
           </ul>
 
           <h2 class="visually__hidden">Фильтр подбора жилья</h2>
@@ -107,22 +113,18 @@
               <div class="price__container">
 
                 <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
-                <label for="price__input__min">от</label>
+                <label for="price__input__min" class="price__label price__label__from">от</label>
 
                 <input class="price__input" type="number" placeholder="0" id="price__input__max" value="9000">
-                <label for="price__input__max">до</label>
+                <label for="price__input__max" class="price__label price__label__till">до</label>
 
               </div>
               <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max">
-              <!--удалил что бы не рушил макет
-              <input class="price__range" type="range" min="0" max="9000" value="3000" name="price__range__min"> -->
-
-
             </fieldset>
 
             <div class="filter__buttons__container">
-              <button class="button button__apply" type="submit">Применить</button>
-              <button class="button button__reset" type="reset">Сбросить</button>
+              <button class="button button__apply button__second" type="submit">Применить</button>
+              <button class="button button__reset button__forth" type="reset">Сбросить</button>
             </div>
 
           </form>
@@ -139,8 +141,9 @@
             </select>
 
             <ul class="view__control__list" aria-label="настройка вида списка">
-              <li class="view__control__item  view__control__item__active">
-                <a href="catalog.html?view=tile" class="view__control__input view__control__input__table">
+              <li class="view__control__item">
+                <a href="catalog.html?view=table"
+                  class="view__control__input view__control__input__table view__control__input__active">
                   <span class="visually__hidden">Маленькие иконки</span></a>
               <li class="view__control__item">
                 <a href="catalog.html?view=card" class="view__control__input view__control__input__slideshow">
@@ -164,8 +167,8 @@
               </a>
               <p class="card__hotel__type">Гостиница</p>
               <p class="card__hotel__price">От <b class="price">4000</b> &#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
+              <a href="#" class="button button__more-info button__primary">Подробнее</a>
+              <button type="button" class="button button__like button__second">В избранное</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 4</span>
                 <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
@@ -184,8 +187,8 @@
               </a>
               <p class="card__hotel__type">Гостиница</p>
               <p class="card__hotel__price">От <b class="price">5000</b> &#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like button__liked">В избранном</button>
+              <a href="#" class="button button__more-info button__primary">Подробнее</a>
+              <button type="button" class="button button__like button__liked button__third">В избранном</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 4</span>
                 <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
@@ -204,8 +207,8 @@
               </a>
               <p class="card__hotel__type">Гостиница</p>
               <p class="card__hotel__price">От <b class="price">2500</b> &#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
+              <a href="#" class="button button__more-info button__primary">Подробнее</a>
+              <button type="button" class="button button__like button__second">В избранное</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 3</span>
                 <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
@@ -224,8 +227,8 @@
               </a>
               <p class="card__hotel__type">Гостиница</p>
               <p class="card__hotel__price">От <b class="price">1500</b> &#8381;</p>
-              <a href="#" class="button button__more-info">Подробнее</a>
-              <button type="button" class="button button__like">В избранное</button>
+              <a href="#" class="button button__more-info button__primary">Подробнее</a>
+              <button type="button" class="button button__like button__second">В избранное</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 2</span>
                 <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
@@ -259,7 +262,6 @@
             </ul>
           </footer>
         </section>
-
         <section class="newsletter banner newsletter__no__image">
           <h2 class="banner__title">Подпишитесь на рассылку</h2>
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
@@ -267,7 +269,7 @@
             <div class="newsletter__banner__container">
               <input class="field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
                 id="newsletter__email">
-              <button type="submit" class="button button__newsletter">Подписаться</button>
+              <button type="submit" class="button button__newsletter button__second">Подписаться</button>
             </div>
           </form>
         </section>
@@ -277,26 +279,51 @@
         <h2 class="visually__hidden">Контакты</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a href="https://vk.com/htmlacademy" class="vk__link" target="_blank">
-              <span class="visually__hidden">В контакте</span>
+            <a href="https://vk.com/htmlacademy" class="vk__link social__link" target="_blank">
+              <span class="visually__hidden">Ссылка на Вконтакте</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" viewBox="0 0 48 40"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M35.1 14q.4-1-.8-1h-2.6q-1 0-1.1.7S29.2 17 27.3 19q-.8.9-1.2.8t-.4-.7v-5.2q0-.9-.8-.9h-4q-.8 0-.8.6c0 .6 1 .8 1 2.5V20q.1 1.1-.4 1c-.9 0-3-3.2-4.3-6.9q-.3-1-1.2-1h-2.6q-1.1 0-1 .7c0 .7 1 4.1 4.2 8.6 2.2 3 5.2 4.7 8 4.7 1.7 0 1.9-.4 1.9-1v-2.3q0-1 .7-.9c.4 0 1 .2 2.6 1.7 1.8 1.7 2 2.5 3 2.5h2.7q1.1 0 1-1.1-.5-1.1-2.3-3l-1.8-2q-.5-.6 0-1.1s3.2-4.4 3.5-6"
+                  clip-rule="evenodd" />
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a href=" https://t.me/htmlacademy " class="telegram__link" target="_blank">
-              <span class=" visually__hidden">Телеграм</span>
+            <a href=" https://t.me/htmlacademy " class="telegram__link social__link" target="_blank">
+              <span class=" visually__hidden">Ссылка на Телеграм</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" aria-hidden="true">
+                <path
+                  d="m31.5 12.1-16 6.1q-1.5.8-.2 1.4l4.1 1.2 9.5-6q.8-.2.5.2l-7.7 7-.3 4.2q.6 0 .9-.4l2-2 4 3q1.3.8 1.6-.6l2.7-12.8c.3-1.1-.4-1.6-1.1-1.3" />
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/user/htmlacademyru" class="youtube__link" target="_blank">
-              <span class=" visually__hidden">Ютуб</span>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="youtube__link social__link" target="_blank">
+              <span class=" visually__hidden">Ссылка на Ютуб</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M31.3 11.5H15.8c-1.8 0-3.1 1.6-3.1 3.4v10c0 2 1.3 3.6 3.1 3.6h15.7c1.6 0 3.2-1.6 3.2-3.4V14.9c-.3-1.8-1.6-3.4-3.4-3.4M20.3 24v-8l7.4 4z" />
+              </svg>
             </a>
           </li>
         </ul>
 
-        <a href="tel:78128121212" class="telephone">+7 (812) 812-12-12</a>
+        <a href="tel:78128121212" class="phone">+7 (812) 812-12-12</a>
 
         <a href="https://htmlacademy.ru/" class="htmlacademy__link" target="_blank">
           <span class="visually__hidden"> сайт HTML академии </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" aria-hidden="true">
+            <g fill="currentColor" clip-path="url(#a)">
+              <path
+                d="M0 12.9v2.6h2.5v-2.6zm11.6-8.4Q9.2 4.6 8 6.2h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9m15 .3h-4.8V1.1h-2v3.8h-1.9v2h1.9v6q0 2.6 2.7 2.7h4.1v-2h-3.7q-1 0-1.1-1.1V6.8h4.8zm14.5-.2q-2.5 0-3.5 2.1h-.1a4 4 0 0 0-3.4-2.1Q32 4.8 31 6.4h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5q2.3.1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3q2.3.1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3m6.7 8.1q0 2.6 2.8 2.7h2v-2h-1.7q-1 0-1.1-1.1V0h-2zm-18.9 7a5 5 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6q2.7-.1 3.8-1.9h.1v1.6h2V18.2h-2zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6M44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6q2.5.2 3.3 2.2h2.1zm10.9-2.3a5 5 0 0 0-3.9-1.8c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6q2.7-.1 3.8-1.9h.1v1.6h2V18.2h-2zm-3.6 7.4a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6m17.2-7.3a5 5 0 0 0-3.9-1.9c-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6q2.6-.1 3.8-1.8h.1v1.5h2V13.4h-2zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6m13.2-9.2a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1q-.8 1.6-3 1.6c-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3m0 1.9q2.7.1 3.3 2.6h-6.5a3 3 0 0 1 3.2-2.6m19.9-1.9a4 4 0 0 0-3.6 2h-.1q-1-1.9-3.4-2-2.2 0-3.1 1.8v-1.5h-1.9v10.6h2v-5.4q.1-3.2 2.6-3.5 2.3.1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3q2.3.1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4m11.2 9.1-3.6-8.9h-2.2l4.8 11.6q-.3 1.3-1.7 1.2h-2.5v2h2.5q2.6 0 3.5-2.6l4.7-12.2h-2.1z" />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 0h115v33H0z" />
+              </clipPath>
+            </defs>
+          </svg>
         </a>
       </footer>
     </div>
