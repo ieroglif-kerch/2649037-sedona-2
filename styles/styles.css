@@ -193,7 +193,6 @@ body {
   margin: 0 0 20px 0;
   font-weight: 700;
   font-size: 30px;
-  /* line-height: 36px;  так текст меньше двоиться в PP */
   color: #000;
   text-transform: uppercase;
 }
