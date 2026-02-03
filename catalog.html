@@ -134,11 +134,17 @@
           <header class="catalog__header">
             <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
             <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
-            <select class="select__control" name="hotels_sort" aria-label="Сортировка">
-              <option value="popular">Сначала популярное</option>
-              <option value="cheap" selected>Сначала дешёвое</option>
-              <option value="expensive">Сначала дорогое</option>
-            </select>
+            <div class="select__container">
+              <select class="select__control" name="hotels_sort" aria-label="Сортировка">
+                <option value="popular">Сначала популярное</option>
+                <option value="cheap" selected>Сначала дешёвое</option>
+                <option value="expensive">Сначала дорогое</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" class="select__arrow">
+                <path
+                  d="m6.6 6.7 5.1-5.3a1 1 0 0 0 0-1.2 1 1 0 0 0-1.2 0L6 5 1.5.2A1 1 0 0 0 .3.2Q0 .4 0 .8l.3.6 5.1 5.3q.6.6 1.2 0" />
+              </svg>
+            </div>
 
             <ul class="view__control__list" aria-label="настройка вида списка">
               <li class="view__control__item">
@@ -267,7 +273,7 @@
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <p class="banner__text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             <div class="newsletter__banner__container">
-              <input class="field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
+              <input class="field field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
                 id="newsletter__email">
               <button type="submit" class="button button__newsletter button__second">Подписаться</button>
             </div>

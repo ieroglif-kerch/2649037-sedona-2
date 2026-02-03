@@ -579,15 +579,54 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.select__control {
-  margin: 0;
+.select__container {
+  position: relative;
   margin-left: auto;
-  padding: 14px 131px 14px 20px;
-  min-width: 200px;
+}
+
+.select__arrow {
+  position: absolute;
+  display: block;
+  fill: "#000000";
+  top: 50%;
+  right: 21px;
+  transform: translateY(-50%);
+}
+
+.select__control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #ffffff;
+  margin: 0;
+  padding: 14px 40px 14px 20px;
+  min-width: 290px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   max-width: 292px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select__control:focus {
+  outline: none;
+  border-color: #68a2ca;
+}
+
+.select__control:hover {
+  border-color: #68a2ca;
+}
+
+.select__control:disabled {
+  color: rgba(0, 0, 0, 0.302);
+  border-color: rgba(0, 0, 0, 0.302);
+  pointer-events: none;
+}
+
+.select__control:disabled ~ .select__arrow {
+  fill: rgba(0, 0, 0, 0.302);
 }
 
 .view__control__list {
