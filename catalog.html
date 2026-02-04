@@ -76,23 +76,23 @@
               <ul class="infrastructure__list">
                 <li class="infrastructure__item">
                   <label class="control">
-                    <input class="visually__hidden infrastructure__input" type="checkbox" name="pool" id="pool"
-                      value="pool" checked>
+                    <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="pool"
+                      id="pool" value="pool" checked>
                     <span class="control__mark"></span>
                     <span class="control__label">Бассейн</span>
                   </label>
                 <li class="infrastructure__item">
                   <label class="control">
-                    <input class="visually__hidden infrastructure__input" type="checkbox" name="parking" id="parking"
-                      value="parking" checked>
+                    <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="parking"
+                      id="parking" value="parking" checked>
                     <span class="control__mark"></span>
                     <span class="control__label"> Парковка </span>
                   </label>
                 </li>
                 <li class="infrastructure__item">
                   <label class="control">
-                    <input class="visually__hidden infrastructure__input" type="checkbox" name="Wi-fi" id="WiFi"
-                      value="Wi-Fi">
+                    <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="Wi-fi"
+                      id="WiFi" value="Wi-Fi">
                     <span class="control__mark"></span>
                     <span class="control__label">Wi-Fi</span>
                   </label>
@@ -105,23 +105,23 @@
               <ul class="accommodation__list">
                 <li class="accommodation__item">
                   <label class="control">
-                    <input class="visually__hidden accommodation__input" type="radio" name="accommodation__group"
-                      id="hotel" value="hotel" checked>
+                    <input class="control__input visually__hidden accommodation__input" type="radio"
+                      name="accommodation__group" id="hotel" value="hotel" checked>
                     <span class="control__mark"></span>
                     <span class="control__label">Гостиница</span>
                   </label>
                 <li class="accommodation__item">
                   <label class="control">
-                    <input class="visually__hidden accommodation__input" type="radio" name="accommodation__group"
-                      id="motel" value="motel">
+                    <input class=" control__input visually__hidden accommodation__input" type="radio"
+                      name="accommodation__group" id="motel" value="motel">
                     <span class="control__mark"></span>
                     <span class="control__label">Мотель </span>
                   </label>
                 </li>
                 <li class="accommodation__item">
                   <label class="control">
-                    <input class="visually__hidden accommodation__input" type="radio" name="accommodation__group"
-                      id="apartment" value="apartment">
+                    <input class=" control__input visually__hidden accommodation__input" type="radio"
+                      name="accommodation__group" id="apartment" value="apartment">
                     <span class="control__mark"></span>
                     <span class="control__label">Апартаменты</span>
                   </label>
@@ -133,13 +133,14 @@
               <legend class="filter__title">Стоимость, &#8381;:</legend>
               <div class="price__container">
                 <div class="input__price__container">
-                  <input class="field price__input" type="number" placeholder="0" id="price__input__min" value="">
+                  <input class="field price__input" type="number" placeholder="0" id="price__input__min"
+                    name="price__input__min" value="0">
                   <label for="price__input__min" class="price__label">от</label>
                 </div>
 
                 <div class="input__price__container">
                   <input class="field price__input field__right" type="number" placeholder="9000" id="price__input__max"
-                    value="">
+                    name="price__input__max" value="9000">
                   <label for="price__input__max" class="price__label">до</label>
                 </div>
               </div>

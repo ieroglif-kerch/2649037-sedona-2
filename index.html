@@ -152,7 +152,7 @@
               <p class="search__message search__message__warning">Мы не можем отправить вас в прошлое</p>
             </div>
 
-            <label for="check-out__date " class="search__label">Дата выезда:</label>
+            <label for="check-out__date" class="search__label">Дата выезда:</label>
             <div class="search__input__container">
               <input type="text" class="input__check-out field" id="check-out__date" name="check-out"
                 value="1 сентября 2023" placeholder="Укажите дату" required>
@@ -160,15 +160,13 @@
             </div>
             <label for="adult" class="search__label">Взрослые:</label>
             <div class="input__person__container">
-              <button type="button" class="button__person__input button__decrease adult__increase"
-                area-label="Уменьшить взрослых">
+              <button type="button" class="button__person__input" area-label="Уменьшить взрослых">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
                   <path d="M3 9v2h14V9z" />
                 </svg>
               </button>
-              <input type="number" id="adult" class="adult__count field" value="1" required>
-              <button type="button" class=" button__person__input button__increase adult__decrease"
-                area-label="Добавить взрослых">
+              <input type="number" id="adult" class="person__input field" value="1" name="adult__count" required>
+              <button type="button" class=" button__person__input" area-label="Добавить взрослых">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
                   <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6z" />
                 </svg>
@@ -176,22 +174,23 @@
             </div>
             <div class="junior__container">
               <label for="junior" class="search__label">Дети:</label>
-              <button type="button" class="button__junior__info">i</button>
-              <p class=" junior__info__window junior__info__message">
-                Укажите количество детей,
-                которые будут с вами, возраст которых от 6 до 18 лет.
-                Дети до 6 лет размещаются бесплатно.
-              </p>
+              <div class="tooltip__container">
+                <button type="button" class="button__tooltip">i</button>
+                <p class=" tooltip__window tooltip__message">
+                  Укажите количество детей,
+                  которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.
+                </p>
+              </div>
             </div>
             <div class="input__person__container">
-              <button type="button" class="button__person__input button__decrease junior__increase"
-                area-label="Уменьшить детей">
+              <button type="button" class="button__person__input" area-label="Уменьшить детей">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
                   <path d="M3 9v2h14V9z" />
                 </svg>
               </button>
-              <input type="number" id="junior" class=" junior__count field " value="2" required>
-              <button type="button" class="button__person__input junior__decrease" area-label="Добавить детей">
+              <input type="number" id="junior" class="person__input field" value="2" name="junior__count" required>
+              <button type="button" class="button__person__input" area-label="Добавить детей">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
                   <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6z" />
                 </svg>
