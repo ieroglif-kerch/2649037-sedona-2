@@ -1283,13 +1283,6 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0;
 }
 
-.persons__adult__container {
-  /* width: 247px; */
-}
-
-.persons__junior__container {
-  /* width: 242px; */
-}
 
 .input__person__container {
   display: flex;
