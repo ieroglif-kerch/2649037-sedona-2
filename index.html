@@ -127,7 +127,7 @@
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <p class="banner__text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             <div class="newsletter__banner__container">
-              <input class="field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
+              <input class="field__newsletter field" placeholder="Ваш e-mail" type="email" name="email"
                 id="newsletter__email">
               <button type="submit" class="button button__newsletter button__second">Подписаться</button>
             </div>
@@ -137,28 +137,69 @@
       </main>
 
 
-      <!-- pop-up window
-    <div class="search__window">
-      <form class="search__form" method="post">
-        <h2 class="search__form__title">Поиск гостиницы в Седоне</h2>
-        <button class="button__close"><span class="visually__hidden">Закрыть окно</span></button>
+      <div class="search__modal__container window__close">
 
-        <label for="check-in__date">Дата заезда</label>
-        <input type="date" class="input__check-in" id="check-in__date" name="check-in" value="2020-03-27">
+        <div class="search__modal__window">
 
-        <label for="check-out__date">Дата выезда</label>
-        <input type="date" class="input__check-out" id="check-out__date" name="check-out" value="2023-09-01">
+          <button type="button" class="button__close"><span class="visually__hidden">Закрыть окно</span></button>
+          <h3 class="banner__title search__title">Поиск гостиницы в Седоне</h3>
+          <form class="search__form" method="post" action="https://echo.htmlacademy.ru/">
 
-        <label for="adult">Взрослые</label>
-        <input type="number" id="adult" class="adult__count">
+            <label for="check-in__date" class="search__label">Дата заезда:</label>
+            <div class="search__input__container">
+              <input type="text" class="input__check-in field" id="check-in__date" name="check-in"
+                placeholder="Укажите дату" value="27 апреля 2020" required>
+              <p class="search__message search__message__warning">Мы не можем отправить вас в прошлое</p>
+            </div>
 
-        <label for="junior">Дети</label>
-        <input type="number" id="junior" class="junior__count">
-
-        <button type="submit" class="button button__search__form">Найти</button>
-      </form>
-     </div>
-    -->
+            <label for="check-out__date" class="search__label">Дата выезда:</label>
+            <div class="search__input__container">
+              <input type="text" class="input__check-out field" id="check-out__date" name="check-out"
+                value="1 сентября 2023" placeholder="Укажите дату" required>
+              <p class="search__message">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+            <label for="adult" class="search__label">Взрослые:</label>
+            <div class="input__person__container">
+              <button type="button" class="button__person__input" aria-label="Уменьшить количество взрослых">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M3 9v2h14V9z" />
+                </svg>
+              </button>
+              <input type="number" id="adult" class="person__input field" value="1" name="adult__count" required>
+              <button type="button" class=" button__person__input" aria-label="Добавить количество взрослых">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6z" />
+                </svg>
+              </button>
+            </div>
+            <div class="junior__container">
+              <label for="junior" class="search__label">Дети:</label>
+              <div class="tooltip__container">
+                <button type="button" class="button__tooltip">i</button>
+                <p class=" tooltip__window tooltip__message">
+                  Укажите количество детей,
+                  которые будут с вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.
+                </p>
+              </div>
+            </div>
+            <div class="input__person__container">
+              <button type="button" class="button__person__input"  aria-label="Уменьшить количество детей">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M3 9v2h14V9z" />
+                </svg>
+              </button>
+              <input type="number" id="junior" class="person__input field" value="2" name="junior__count" required>
+              <button type="button" class="button__person__input" aria-label="Добавить количество детей">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" fill="currentColor">
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6z" />
+                </svg>
+              </button>
+            </div>
+            <button type="submit" class="button button__second button__search__form">Найти</button>
+          </form>
+        </div>
+      </div>
 
       <footer class="page__footer">
         <h2 class="visually__hidden">Контакты</h2>
@@ -212,6 +253,14 @@
         </a>
       </footer>
     </div>
+
+    <script>
+      const modal = document.querySelector('.search__modal__container');
+      const closeBtn = document.querySelector('.button__close');
+      const openBtn = document.querySelector('.button__search')
+      closeBtn.addEventListener('click', () => { modal.classList.add('window__close'); });
+      openBtn.addEventListener('click', () => { modal.classList.remove('window__close'); });
+    </script>
   </body>
 
 </html>

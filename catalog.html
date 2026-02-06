@@ -75,16 +75,27 @@
               <legend class="filter__title">Инфраструктура:</legend>
               <ul class="infrastructure__list">
                 <li class="infrastructure__item">
-                  <input class="infrastructure__input" type="checkbox" name="pool" id="pool" value="pool" checked>
-                  <label for="pool">Бассейн</label>
+                  <label class="control">
+                    <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="pool"
+                      id="pool" value="pool" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Бассейн</span>
+                  </label>
                 <li class="infrastructure__item">
-                  <input class="infrastructure__input" type="checkbox" name="parking" id="parking" value="parking"
-                    checked>
-                  <label for="parking"> Парковка </label>
+                  <label class="control">
+                    <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="parking"
+                      id="parking" value="parking" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label"> Парковка </span>
+                  </label>
                 </li>
                 <li class="infrastructure__item">
-                  <input class="infrastructure__input" type="checkbox" name="Wi-fi" id="WiFi" value="Wi-Fi">
-                  <label for="WiFi">Wi-Fi</label>
+                  <label class="control">
+                    <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="Wi-fi"
+                      id="WiFi" value="Wi-Fi">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Wi-Fi</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -93,17 +104,27 @@
               <legend class="filter__title">Тип жилья:</legend>
               <ul class="accommodation__list">
                 <li class="accommodation__item">
-                  <input class="accommodation__input" type="radio" name="accommodation__group" id="hotel" value="hotel"
-                    checked>
-                  <label for="hotel">Гостиница</label>
+                  <label class="control">
+                    <input class="control__input visually__hidden accommodation__input" type="radio"
+                      name="accommodation__group" id="hotel" value="hotel" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Гостиница</span>
+                  </label>
                 <li class="accommodation__item">
-                  <input class="accommodation__input" type="radio" name="accommodation__group" id="motel" value="motel">
-                  <label for="motel"> Мотель </label>
+                  <label class="control">
+                    <input class=" control__input visually__hidden accommodation__input" type="radio"
+                      name="accommodation__group" id="motel" value="motel">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Мотель </span>
+                  </label>
                 </li>
                 <li class="accommodation__item">
-                  <input class="accomodation__input" type="radio" name="accommodation__group" id="apartment"
-                    value="apartment">
-                  <label for="appartment">Апартаменты</label>
+                  <label class="control">
+                    <input class=" control__input visually__hidden accommodation__input" type="radio"
+                      name="accommodation__group" id="apartment" value="apartment">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Апартаменты</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -111,15 +132,30 @@
             <fieldset class="price__range__fieldset">
               <legend class="filter__title">Стоимость, &#8381;:</legend>
               <div class="price__container">
+                <div class="input__price__container">
+                  <input class="field price__input" type="number" placeholder="0" id="price__input__min"
+                    name="price__input__min" value="0">
+                  <label for="price__input__min" class="price__label">от</label>
+                </div>
 
-                <input class="price__input" type="number" placeholder="0" id="price__input__min" value="0">
-                <label for="price__input__min" class="price__label price__label__from">от</label>
-
-                <input class="price__input" type="number" placeholder="0" id="price__input__max" value="9000">
-                <label for="price__input__max" class="price__label price__label__till">до</label>
-
+                <div class="input__price__container">
+                  <input class="field price__input field__right" type="number" placeholder="9000" id="price__input__max"
+                    name="price__input__max" value="9000">
+                  <label for="price__input__max" class="price__label">до</label>
+                </div>
               </div>
-              <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max">
+
+              <div class="range__scale">
+                <div class="range__bar" style="left: 0; width: 215px">
+                  <button type="button" class="range__button range__button__min" name="range__button__from"
+                    id="range__button__from"><span class="visually__hidden">Изменить минимальную цену</span></button>
+                  <button type="button" class="range__button range__button__max" name="range__button__to"
+                    id="range__button__to"><span class="visually__hidden">Изменить максимальную цену</span></button>
+                </div>
+              </div>
+
+
+              <!-- <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max"> -->
             </fieldset>
 
             <div class="filter__buttons__container">
@@ -134,11 +170,17 @@
           <header class="catalog__header">
             <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
             <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
-            <select class="select__control" name="hotels_sort" aria-label="Сортировка">
-              <option value="popular">Сначала популярное</option>
-              <option value="cheap" selected>Сначала дешёвое</option>
-              <option value="expensive">Сначала дорогое</option>
-            </select>
+            <div class="select__container">
+              <select class="select__control" name="hotels_sort" aria-label="Сортировка">
+                <option value="popular">Сначала популярное</option>
+                <option value="cheap" selected>Сначала дешёвое</option>
+                <option value="expensive">Сначала дорогое</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" class="select__arrow">
+                <path
+                  d="m6.6 6.7 5.1-5.3a1 1 0 0 0 0-1.2 1 1 0 0 0-1.2 0L6 5 1.5.2A1 1 0 0 0 .3.2Q0 .4 0 .8l.3.6 5.1 5.3q.6.6 1.2 0" />
+              </svg>
+            </div>
 
             <ul class="view__control__list" aria-label="настройка вида списка">
               <li class="view__control__item">
@@ -267,7 +309,7 @@
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <p class="banner__text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             <div class="newsletter__banner__container">
-              <input class="field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
+              <input class="field field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
                 id="newsletter__email">
               <button type="submit" class="button button__newsletter button__second">Подписаться</button>
             </div>
