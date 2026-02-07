@@ -119,6 +119,11 @@ body {
   z-index: 1;
 }
 
+.navigation__link:hover,
+.logo__link:hover {
+  opacity: 0.7;
+}
+
 .navigation__search {
   background-image: url("../images/icons/search.svg");
   background-position: center;
@@ -134,10 +139,10 @@ body {
 
 .navigation__likes {
   position: absolute;
-  top: 0;
-  left: 20px;
-  width: 19px;
-  height: 19px;
+  top: -1px;
+  left: 21px;
+  width: 20px;
+  height: 20px;
   padding-top: 5px;
   text-align: center;
   font-size: 10px;
@@ -214,7 +219,7 @@ body {
 }
 
 .is__interested__banner {
-  padding: 93px 69px;
+  padding: 94px 69px;
 }
 
 .newsletter {
@@ -247,13 +252,14 @@ body {
 .newsletter__banner__container {
   display: flex;
   justify-content: center;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 10px 0;
 }
 
 /* ------------------------------INPUTS--------------------- */
 
 .button {
-  padding: 8px 50px;
+  padding: 8px 51px;
   font-family: inherit;
   font-weight: 700;
   background-color: #756157;
@@ -290,6 +296,7 @@ body {
 
 .button__reset {
   background: transparent;
+  line-height: 15px;
 }
 
 .button__primary:not(.button__is__disabled):focus {
@@ -390,7 +397,7 @@ body {
 
 .field__newsletter {
   min-width: 452px;
-  height: 52px;
+  min-height: 52px;
 }
 
 /* ------------------------------FILTER BANNER------------------------------*/
@@ -404,7 +411,7 @@ body {
   background-image: url("../images/backgrounds/catalog_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 411px;
+  min-height: 412px;
 }
 
 .filter__banner h1 {
@@ -478,9 +485,13 @@ breadcrumbs__link:focus-visible {
 .infrastructure,
 .accommodation__type,
 .price__range__fieldset {
-  margin: 0 70px 0 0;
+  margin: 0 69px 0 0;
   padding: 0;
   border: none;
+}
+
+.accommodation__type {
+  padding-left: 2px;
 }
 
 .filter__title {
@@ -536,7 +547,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .price__input {
   width: 100%;
-  padding: 12px 42px 12px 19px;
+  padding: 12px 42px 12px 21px;
   font-weight: 700;
 }
 
@@ -552,6 +563,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .range__scale {
   position: relative;
   height: 4px;
+  left: 1px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -586,7 +598,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .range__button__min {
   top: -8px;
-  left: -10;
+  left: 0;
 }
 
 .range__button__max {
@@ -597,7 +609,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .control {
   position: relative;
   display: block;
-  padding-left: 28px;
+  padding-left: 36px;
 }
 
 .control:focus {
@@ -675,7 +687,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .filter__buttons__container button:first-child {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 /* ------------------------------CATALOG ------------------------------ */
@@ -901,19 +913,21 @@ input[type="number"]::-webkit-outer-spin-button {
 .hotel__stars {
   display: flex;
   align-items: center;
+  gap: 6px;
 }
 
 /* ------------------------------PAGINATION------------------------------ */
 
 .pagination__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+  gap: 8px;
 }
 
 .pagination__link {
-  margin-right: 8px;
   padding: 12px 0;
   display: block;
   width: 60px;
@@ -959,6 +973,8 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #000;
   background-color: #fff;
   pointer-events: none;
+  font-size: 22px;
+  line-height: 34px;
 }
 
 .pagination__disabled:focus {
@@ -1054,7 +1070,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .advantages__item img {
   margin: 0 auto 30px;
-  height: 75px;
+  height: 73px;
 }
 
 .about__item__image {
@@ -1106,11 +1122,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .phone {
+  max-width: 500px;
   font-family: inherit;
   color: #000;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .phone:hover {
@@ -1128,6 +1146,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .htmlacademy__link {
   color: #000000;
+  padding-bottom: 2px;
 }
 
 .htmlacademy__link:hover {
@@ -1172,7 +1191,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .search__form {
   display: grid;
   grid-template-columns: 137px 110px 1fr 137px 110px;
-  row-gap: 23px;
+  row-gap: 48px;
+  align-items: center;
 }
 
 .search__title {
@@ -1180,13 +1200,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .search__label {
-  padding-top: 12px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
 .search__message {
+  position: absolute;
   margin: 0;
   padding-left: 20px;
 }
@@ -1251,7 +1271,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .button__search__form {
-  margin-top: 25px;
   grid-column: 1/-1;
   background-color: #83b3d3;
   width: 100%;
@@ -1274,15 +1293,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .junior__container {
   grid-column: 4 / 5;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 10px;
+  padding-left: 5px;
 }
 
 .junior__container label {
   padding: 0;
 }
-
 
 .input__person__container {
   display: flex;
@@ -1357,12 +1375,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .input__check-in,
 .input__check-out {
+  padding: 12px 30px 12px 20px;
   width: 100%;
   font-weight: 700;
   border-radius: 4px;
   background-image: url(..//images/icons/date.svg);
   background-repeat: no-repeat;
-  background-position: right 14px center;
+  background-position: right 19px center;
 }
 
 .tooltip__container {
