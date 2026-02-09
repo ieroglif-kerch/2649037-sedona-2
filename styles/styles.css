@@ -51,7 +51,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   width: 1200px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -64,7 +64,7 @@ body {
 .page__header {
   padding: 0 70px;
   display: flex;
-  outline: #000;
+  outline: #000000;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -121,7 +121,7 @@ body {
 }
 
 .navigation__link:hover,
-.logo__link:hover {
+.city__logo:hover {
   opacity: 0.7;
 }
 
@@ -149,13 +149,14 @@ body {
   font-size: 10px;
   font-weight: 400;
   line-height: 10px;
-  color: #fff;
+  color: #ffffff;
   background-color: #7db54f;
   border-radius: 50%;
 }
 
 .navigation__user__list {
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 .navigation__user__list li {
@@ -187,7 +188,7 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
   background-color: #01ffff;
-  color: #fff;
+  color: #ffffff;
 }
 
 .banner__image::after {
@@ -210,7 +211,7 @@ body {
   line-height: 38px;
   font-weight: 700;
   font-size: 30px;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -240,14 +241,14 @@ body {
 
 .newsletter {
   padding: 96px 70px 104px;
-  color: #fff;
+  color: #ffffff;
   background-color: #82b3d3;
   background-image: url(../images/backgrounds/subscribe_background.jpg);
   background-size: cover;
 }
 
 .newsletter .banner__title {
-  color: #fff;
+  color: #ffffff;
 }
 
 .newsletter .banner__text,
@@ -262,7 +263,7 @@ body {
 }
 
 .newsletter__no__image .banner__title {
-  color: #000;
+  color: #000000;
 }
 
 .newsletter__banner__container {
@@ -279,7 +280,7 @@ body {
   font-family: inherit;
   font-weight: 700;
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -428,7 +429,7 @@ body {
   padding: 35px 70px;
   font-size: 18px;
   line-height: 23px;
-  color: #fff;
+  color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/backgrounds/catalog_background.jpg");
   background-repeat: no-repeat;
@@ -600,7 +601,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -731,7 +732,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .catalog__header {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
 }
@@ -760,8 +761,8 @@ input[type="number"]::-webkit-outer-spin-button {
   -moz-appearance: none;
   background: #ffffff;
   margin: 0;
-  padding: 14px 40px 14px 20px;
-  min-width: 290px;
+  padding: 12px 40px 12px 20px;
+  min-width: 292px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
@@ -794,12 +795,10 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-left: auto;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: right;
   list-style: none;
-}
-
-.view__control__item {
-  margin-right: 8px;
 }
 
 .view__control__input {
@@ -808,7 +807,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .view__control__input__active {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .view__control__input {
@@ -826,11 +825,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .view__control__input:hover {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .view__control__input:active {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .view__control__input__table {
@@ -898,7 +897,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  color: #000;
+  color: #000000;
 }
 
 .hotel__card a {
@@ -993,7 +992,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .pagination__active {
-  color: #000;
+  color: #000000;
   background-color: #f2f2f2;
   pointer-events: none;
 }
@@ -1003,8 +1002,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .pagination__disabled {
-  color: #000;
-  background-color: #fff;
+  color: #000000;
+  background-color: #ffffff;
   pointer-events: none;
   font-size: 22px;
   line-height: 34px;
@@ -1055,18 +1054,36 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .advantages__item {
-  padding: 80px 85px;
+  padding: 183px 85px 80px;
 }
 
+.advantages__background__prim,
+.advantages__background__sec,
+.advantages__background__third {
+  background-repeat: no-repeat;
+  background-position: center 80px;
+}
+
+.advantages__background__prim {
+  background-image: url(../images/icons/advantage_house.svg);
+}
+
+.advantages__background__sec {
+  background-image: url(../images/icons/advantage_burger.svg);
+}
+
+.advantages__background__third {
+  background-image: url(../images/icons/advantage_box.svg);
+}
 .about__sedona__item__image {
   display: flex;
   background-color: #82b3d3;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
 }
 
 .about__sedona__item__image .about__item__title {
-  color: #fff;
+  color: #ffffff;
 }
 
 .about__item__title,
@@ -1075,7 +1092,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0 0 63px 0;
   font-weight: 700;
   font-size: 24px;
-  color: #000;
+  color: #000000;
   line-height: 28px;
   text-transform: uppercase;
 }
@@ -1158,7 +1175,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .phone {
   max-width: 500px;
   font-family: inherit;
-  color: #000;
+  color: #000000;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
@@ -1214,8 +1231,8 @@ input[type="number"]::-webkit-outer-spin-button {
   max-width: 717px;
   max-height: 100%;
   padding: 64px 70px;
-  /* overflow-y: auto; */
-  background-color: #fff;
+  overflow-y: auto;
+  background-color: #ffffff;
   border-radius: 30px;
   position: relative;
   width: 100%;
@@ -1287,7 +1304,7 @@ input[type="number"]::-webkit-outer-spin-button {
   left: 50%;
   width: 24px;
   height: 3px;
-  background-color: #000;
+  background-color: #000000;
   transform-origin: center;
   transform: translate(-50%, -50%);
 }

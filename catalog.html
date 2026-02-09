@@ -78,14 +78,14 @@
                 <li class="infrastructure__item">
                   <label class="control">
                     <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="pool"
-                      id="pool" value="pool" checked>
+                      id="pool" checked>
                     <span class="control__mark"></span>
                     <span class="control__label">Бассейн</span>
                   </label>
                 <li class="infrastructure__item">
                   <label class="control">
                     <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="parking"
-                      id="parking" value="parking" checked>
+                      id="parking" checked>
                     <span class="control__mark"></span>
                     <span class="control__label"> Парковка </span>
                   </label>
@@ -93,7 +93,7 @@
                 <li class="infrastructure__item">
                   <label class="control">
                     <input class=" control__input visually__hidden infrastructure__input" type="checkbox" name="Wi-fi"
-                      id="WiFi" value="Wi-Fi">
+                      id="WiFi">
                     <span class="control__mark"></span>
                     <span class="control__label">Wi-Fi</span>
                   </label>
@@ -165,8 +165,8 @@
         </section>
 
         <section class="main__catalog" data-test="catalog">
+          <h2 class="visually__hidden">Найденные гостиницы:</h2>
           <header class="catalog__header">
-            <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
             <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
             <div class="select__container">
               <select class="select__control" name="hotels_sort" aria-label="Сортировка">
@@ -181,22 +181,20 @@
             </div>
 
             <ul class="view__control__list" aria-label="настройка вида списка">
-              <li class="view__control__item">
-                <a href="catalog.html?view=table"
+              <li>
+                <a href="catalog.html?view=tile"
                   class="view__control__input view__control__input__table view__control__input__active">
                   <span class="visually__hidden">Маленькие иконки</span></a>
-              <li class="view__control__item">
+              <li>
                 <a href="catalog.html?view=card" class="view__control__input view__control__input__slideshow">
                   <span class="visually__hidden">Больше иконки</span></a>
               </li>
-              <li class="view__control__item">
+              <li>
                 <a href="catalog.html?view=list" class="view__control__input view__control__input__list">
                   <span class="visually__hidden">Список</span></a>
               </li>
             </ul>
           </header>
-
-          <h2 class="visually__hidden">Найденные гостиницы:</h2>
           <ul class="hotels__list">
             <li class="hotel__card">
               <a href="#" class="card__picture">
@@ -211,10 +209,10 @@
               <button type="button" class="button button__like button__second">В избранное</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 4</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
               </div>
               <p class="button__rating">Рейтинг: <span class="hotel__rating">8.5</span></p>
             </li>
@@ -231,10 +229,10 @@
               <button type="button" class="button button__like button__liked button__third">В избранном</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 4</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
               </div>
               <p class="button__rating">Рейтинг: <span class="hotel__rating">9.2</span></p>
             </li>
@@ -251,9 +249,9 @@
               <button type="button" class="button button__like button__second">В избранное</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 3</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
               </div>
               <p class="button__rating">Рейтинг: <span class="hotel__rating">6.9</span></p>
             </li>
@@ -271,15 +269,14 @@
               <button type="button" class="button button__like button__second">В избранное</button>
               <div class="hotel__stars">
                 <span class="visually__hidden">Звёзд у отеля: 2</span>
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
-                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
+                <img src="images/icons/star.svg" class="star" alt="Звезда" aria-hidden="true" width="18" height="17">
               </div>
               <p class="button__rating">Рейтинг: <span class="hotel__rating">8.5</span></p>
             </li>
           </ul>
 
           <footer class="pagination">
-            <h2 class="visually__hidden">Страницы с найденными отелями</h2>
             <ul class="pagination__list">
               <li class="pagination__item">
                 <a href="#" class="pagination__link pagination__active">1</a>
@@ -319,7 +316,8 @@
         <h2 class="visually__hidden">Контакты</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a href="https://vk.com/htmlacademy" class="vk__link social__link" target="_blank">
+            <a href="https://vk.com/htmlacademy" class="vk__link social__link" target="_blank"
+              rel="noreferrer noopener">
               <span class="visually__hidden">Ссылка на Вконтакте</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" viewBox="0 0 48 40"
                 aria-hidden="true">
@@ -330,7 +328,8 @@
             </a>
           </li>
           <li class="social__item">
-            <a href=" https://t.me/htmlacademy " class="telegram__link social__link" target="_blank">
+            <a href=" https://t.me/htmlacademy " class="telegram__link social__link" target="_blank"
+              rel="noreferrer noopener">
               <span class=" visually__hidden">Ссылка на Телеграм</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" aria-hidden="true">
                 <path
@@ -339,7 +338,8 @@
             </a>
           </li>
           <li class="social__item">
-            <a href="https://www.youtube.com/user/htmlacademyru" class="youtube__link social__link" target="_blank">
+            <a href="https://www.youtube.com/user/htmlacademyru" class="youtube__link social__link" target="_blank"
+              rel="noreferrer noopener">
               <span class=" visually__hidden">Ссылка на Ютуб</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" fill="currentColor" aria-hidden="true">
                 <path
@@ -351,7 +351,8 @@
 
         <a href="tel:78128121212" class="phone">+7 (812) 812-12-12</a>
 
-        <a href="https://htmlacademy.ru/" class="htmlacademy__link" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy__link" target="_blank"
+          rel="noreferrer noopener">
           <span class="visually__hidden"> сайт HTML академии </span>
           <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" aria-hidden="true">
             <g fill="currentColor" clip-path="url(#a)">
