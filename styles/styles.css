@@ -84,7 +84,7 @@ body {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding-left: 20px;
 }
@@ -104,6 +104,7 @@ body {
   position: relative;
   display: block;
   padding: 20px 15px;
+  height: 100%;
   color: inherit;
   text-decoration: none;
 }
@@ -117,6 +118,11 @@ body {
   right: 16px;
   background-color: #756257;
   z-index: 1;
+}
+
+.navigation__link:hover,
+.logo__link:hover {
+  opacity: 0.7;
 }
 
 .navigation__search {
@@ -134,11 +140,11 @@ body {
 
 .navigation__likes {
   position: absolute;
-  top: 0;
-  left: 20px;
-  width: 19px;
-  height: 19px;
-  padding-top: 5px;
+  top: 10px;
+  left: 21px;
+  width: 20px;
+  height: 20px;
+  padding-top: 6px;
   text-align: center;
   font-size: 10px;
   font-weight: 400;
@@ -148,14 +154,24 @@ body {
   border-radius: 50%;
 }
 
+.navigation__user__list {
+  margin-left: auto;
+}
+
 .navigation__user__list li {
   min-width: 44px;
 }
 
-.navigation__item .navigation__button {
+.navigation__user__list .navigation__item {
+  height: 64px;
+}
+
+.navigation .navigation__button {
   display: block;
   margin-left: 20px;
-  padding: 8px 35px;
+  min-width: 160px;
+  padding: 8px 14px;
+  text-align: center;
 }
 
 /* ------------------------------BANNER----------------------*/
@@ -190,7 +206,8 @@ body {
 }
 
 .banner__title {
-  margin: 0 0 20px 0;
+  margin: 0 0 23px 0;
+  line-height: 38px;
   font-weight: 700;
   font-size: 30px;
   color: #000;
@@ -213,8 +230,12 @@ body {
   padding: 62px 70px;
 }
 
+.advantages__banner .banner__title {
+  margin-bottom: 18px;
+}
+
 .is__interested__banner {
-  padding: 93px 69px;
+  padding: 94px 69px;
 }
 
 .newsletter {
@@ -231,7 +252,7 @@ body {
 
 .newsletter .banner__text,
 .is__interested__banner .banner__text {
-  margin-bottom: 53px;
+  margin-bottom: 51px;
 }
 
 .newsletter__no__image {
@@ -247,13 +268,14 @@ body {
 .newsletter__banner__container {
   display: flex;
   justify-content: center;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 10px 0;
 }
 
 /* ------------------------------INPUTS--------------------- */
 
 .button {
-  padding: 8px 50px;
+  padding: 8px 51px;
   font-family: inherit;
   font-weight: 700;
   background-color: #756157;
@@ -279,9 +301,15 @@ body {
 }
 
 .button__search {
+  display: block;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 36px;
   min-height: 52px;
+}
+
+.button__search:not(:first-child) {
+  margin-top: 8px;
 }
 
 .button__apply {
@@ -290,6 +318,7 @@ body {
 
 .button__reset {
   background: transparent;
+  line-height: 15px;
 }
 
 .button__primary:not(.button__is__disabled):focus {
@@ -390,7 +419,7 @@ body {
 
 .field__newsletter {
   min-width: 452px;
-  height: 52px;
+  min-height: 52px;
 }
 
 /* ------------------------------FILTER BANNER------------------------------*/
@@ -404,7 +433,7 @@ body {
   background-image: url("../images/backgrounds/catalog_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 411px;
+  min-height: 412px;
 }
 
 .filter__banner h1 {
@@ -473,14 +502,19 @@ breadcrumbs__link:focus-visible {
 .filter__form {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .infrastructure,
 .accommodation__type,
 .price__range__fieldset {
-  margin: 0 70px 0 0;
+  margin: 0 69px 0 0;
   padding: 0;
   border: none;
+}
+
+.accommodation__type {
+  padding-left: 2px;
 }
 
 .filter__title {
@@ -504,7 +538,7 @@ breadcrumbs__link:focus-visible {
 }
 
 .price__range__fieldset {
-  margin-left: auto;
+  margin-left: 80px;
   display: flex;
   flex-direction: column;
   max-width: 290px;
@@ -536,7 +570,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .price__input {
   width: 100%;
-  padding: 12px 42px 12px 19px;
+  padding: 12px 42px 12px 21px;
   font-weight: 700;
 }
 
@@ -552,6 +586,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .range__scale {
   position: relative;
   height: 4px;
+  left: 1px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -586,7 +621,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .range__button__min {
   top: -8px;
-  left: -10;
+  left: 0;
 }
 
 .range__button__max {
@@ -597,7 +632,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .control {
   position: relative;
   display: block;
-  padding-left: 28px;
+  padding-left: 36px;
+  cursor: pointer;
 }
 
 .control:focus {
@@ -624,6 +660,16 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
+}
+
+.control__input:disabled + .control__mark,
+.control__input:disabled ~ .control__label {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.control:has(.control__input:disabled) {
+  pointer-events: none;
 }
 
 /*checkbox*/
@@ -672,31 +718,30 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 .filter__buttons__container button:first-child {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 /* ------------------------------CATALOG ------------------------------ */
 .main__catalog {
-  padding: 48px 70px 60px;
+  padding: 50px 70px 60px;
 }
 
 .catalog__header {
   margin-bottom: 38px;
   display: flex;
   align-items: center;
-  gap: 70px;
 }
 
 .catalog__header .banner__title {
-  margin: 0;
+  margin: 0 200px 0 0;
 }
 
 .select__container {
   position: relative;
-  margin-left: auto;
 }
 
 .select__arrow {
@@ -720,7 +765,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
-  max-width: 292px;
+  /* max-width: 292px; */
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
@@ -747,6 +792,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .view__control__list {
   margin: 0;
+  margin-left: auto;
   padding: 0;
   display: flex;
   justify-content: right;
@@ -901,19 +947,21 @@ input[type="number"]::-webkit-outer-spin-button {
 .hotel__stars {
   display: flex;
   align-items: center;
+  gap: 6px;
 }
 
 /* ------------------------------PAGINATION------------------------------ */
 
 .pagination__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+  gap: 8px;
 }
 
 .pagination__link {
-  margin-right: 8px;
   padding: 12px 0;
   display: block;
   width: 60px;
@@ -959,6 +1007,8 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #000;
   background-color: #fff;
   pointer-events: none;
+  font-size: 22px;
+  line-height: 34px;
 }
 
 .pagination__disabled:focus {
@@ -1023,7 +1073,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .about__item__title,
 .advantages__title {
   position: relative;
-  margin: 0 0 61px 0;
+  margin: 0 0 63px 0;
   font-weight: 700;
   font-size: 24px;
   color: #000;
@@ -1038,7 +1088,8 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 2px;
   bottom: -32px;
   left: calc(50% - 30px);
-  background-color: rgb(from currentColor r g b / 30%);
+  background-color: currentColor;
+  opacity: 0.3;
 }
 
 .advantages__title {
@@ -1054,7 +1105,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .advantages__item img {
   margin: 0 auto 30px;
-  height: 75px;
+  height: 73px;
 }
 
 .about__item__image {
@@ -1106,11 +1157,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .phone {
+  max-width: 500px;
   font-family: inherit;
   color: #000;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .phone:hover {
@@ -1128,6 +1181,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .htmlacademy__link {
   color: #000000;
+  padding-bottom: 2px;
 }
 
 .htmlacademy__link:hover {
@@ -1161,7 +1215,7 @@ input[type="number"]::-webkit-outer-spin-button {
   max-width: 717px;
   max-height: 100%;
   padding: 64px 70px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   background-color: #fff;
   border-radius: 30px;
   position: relative;
@@ -1172,7 +1226,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .search__form {
   display: grid;
   grid-template-columns: 137px 110px 1fr 137px 110px;
-  row-gap: 23px;
+  row-gap: 48px;
+  align-items: center;
 }
 
 .search__title {
@@ -1180,13 +1235,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .search__label {
-  padding-top: 12px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
 .search__message {
+  position: absolute;
   margin: 0;
   padding-left: 20px;
 }
@@ -1251,7 +1306,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .button__search__form {
-  margin-top: 25px;
   grid-column: 1/-1;
   background-color: #83b3d3;
   width: 100%;
@@ -1274,15 +1328,14 @@ input[type="number"]::-webkit-outer-spin-button {
 .junior__container {
   grid-column: 4 / 5;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 10px;
+  padding-left: 5px;
 }
 
 .junior__container label {
   padding: 0;
 }
-
 
 .input__person__container {
   display: flex;
@@ -1357,12 +1410,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .input__check-in,
 .input__check-out {
+  padding: 12px 30px 12px 20px;
   width: 100%;
   font-weight: 700;
   border-radius: 4px;
   background-image: url(..//images/icons/date.svg);
   background-repeat: no-repeat;
-  background-position: right 14px center;
+  background-position: right 19px center;
 }
 
 .tooltip__container {

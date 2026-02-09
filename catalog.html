@@ -3,13 +3,14 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
     <div class="page__container">
-      <header class="page__header">
+      <header class="page__header" data-test="header">
 
         <a href="index.html" class="logo__link">
           <img src="images/icons/logo_sedona.svg" alt="город Cедона" class="city__logo" width="140" height="70">
@@ -41,15 +42,15 @@
                 <span class="navigation__likes">12</span>
               </a>
             </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__button button button__primary">ХОЧУ СЮДА!</a>
-            </li>
+
           </ul>
+          <a href="#" class="navigation__button button button__primary">ХОЧУ СЮДА!</a>
+
         </nav>
       </header>
 
-      <main>
-        <section class="filter__banner">
+      <main data-test="main">
+        <section class="filter__banner" data-test="filter">
           <h1 class="filter__banner__title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
@@ -101,7 +102,7 @@
             </fieldset>
 
             <fieldset class="accommodation__type">
-              <legend class="filter__title">Тип жилья:</legend>
+              <legend class="filter__title">Тип Жилья:</legend>
               <ul class="accommodation__list">
                 <li class="accommodation__item">
                   <label class="control">
@@ -146,16 +147,13 @@
               </div>
 
               <div class="range__scale">
-                <div class="range__bar" style="left: 0; width: 215px">
+                <div class="range__bar" style="left: 0; width: 217px">
                   <button type="button" class="range__button range__button__min" name="range__button__from"
                     id="range__button__from"><span class="visually__hidden">Изменить минимальную цену</span></button>
                   <button type="button" class="range__button range__button__max" name="range__button__to"
                     id="range__button__to"><span class="visually__hidden">Изменить максимальную цену</span></button>
                 </div>
               </div>
-
-
-              <!-- <input class="price__range" type="range" min="0" max="9000" value="7000" name="price__range__max"> -->
             </fieldset>
 
             <div class="filter__buttons__container">
@@ -166,7 +164,7 @@
           </form>
         </section>
 
-        <section class="main__catalog">
+        <section class="main__catalog" data-test="catalog">
           <header class="catalog__header">
             <h2 class="visually__hidden">Настройка списка и сортировка отелей</h2>
             <p class="banner__title">Найдено гостиниц: <span class="hotels_found">38</span></p>
@@ -304,20 +302,20 @@
             </ul>
           </footer>
         </section>
-        <section class="newsletter banner newsletter__no__image">
+        <section class="newsletter banner newsletter__no__image" data-test="subscribe">
           <h2 class="banner__title">Подпишитесь на рассылку</h2>
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <p class="banner__text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
             <div class="newsletter__banner__container">
               <input class="field field__newsletter" placeholder="Ваш e-mail" type="email" name="email"
-                id="newsletter__email">
+                id="newsletter__email" required>
               <button type="submit" class="button button__newsletter button__second">Подписаться</button>
             </div>
           </form>
         </section>
       </main>
 
-      <footer class="page__footer">
+      <footer class="page__footer" data-test="footer">
         <h2 class="visually__hidden">Контакты</h2>
         <ul class="social__list">
           <li class="social__item">
