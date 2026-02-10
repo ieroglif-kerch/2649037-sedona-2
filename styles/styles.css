@@ -420,6 +420,11 @@ body {
   background-color: #e5e5e5;
 }
 
+.field:disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .field__newsletter {
   min-width: 452px;
   min-height: 52px;
@@ -561,13 +566,13 @@ breadcrumbs__link:focus-visible {
   position: relative;
 }
 
-.price__input::-webkit-inner-spin-button,
-.price__input::-webkit-outer-spin-button {
+.number__input::-webkit-inner-spin-button,
+.number__input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.price__input {
+.number__input {
   width: 100%;
   padding: 12px 42px 12px 21px;
   font-weight: 700;
@@ -741,7 +746,6 @@ breadcrumbs__link:focus-visible {
 
 .catalog__header .banner__title {
   margin: 0 200px 0 0;
-  white-space: nowrap;
 }
 
 .select__container {
@@ -1425,6 +1429,11 @@ breadcrumbs__link:focus-visible {
 
 .button__person__input:active {
   color: rgba(0, 0, 0, 0.2);
+}
+
+.button__person__input:disabled {
+  pointer-events: none;
+  opacity: 0.8;
 }
 
 .input__check-in,
