@@ -242,7 +242,7 @@ body {
 .newsletter {
   padding: 96px 70px 104px;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #3f5e72;
   background-image: url(../images/backgrounds/subscribe_background.jpg);
   background-size: cover;
 }
@@ -377,7 +377,8 @@ body {
   color: rgba(255, 255, 255, 0.302);
 }
 
-.button__is__disabled {
+.button__is__disabled,
+.button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
   pointer-events: none;
@@ -388,7 +389,8 @@ body {
   outline: none;
 }
 
-.button__is__disabled.button__forth {
+.button__is__disabled.button__forth,
+.button__forth.button:disabled {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.1);
 }
@@ -430,7 +432,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #3f5e72;
   background-image: url("../images/backgrounds/catalog_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -559,12 +561,8 @@ breadcrumbs__link:focus-visible {
   position: relative;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+.price__input::-webkit-inner-spin-button,
+.price__input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -573,6 +571,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
   padding: 12px 42px 12px 21px;
   font-weight: 700;
+  -moz-appearance: textfield;
 }
 
 .price__label {
@@ -734,11 +733,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .catalog__header {
   margin-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .catalog__header .banner__title {
   margin: 0 200px 0 0;
+  white-space: nowrap;
 }
 
 .select__container {
@@ -962,7 +963,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .pagination__link {
   padding: 12px 0;
   display: block;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   border-radius: 4px;
   text-decoration: none;
