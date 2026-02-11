@@ -740,12 +740,14 @@ breadcrumbs__link:focus-visible {
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   row-gap: 8px;
 }
 
 .catalog__header .banner__title {
   margin: 0 200px 0 0;
+  max-width: 400px;
+  padding: 6px 0;
 }
 
 .select__container {
@@ -801,6 +803,7 @@ breadcrumbs__link:focus-visible {
   margin: 0;
   margin-left: auto;
   padding: 0;
+  max-width: 160px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1180,13 +1183,12 @@ breadcrumbs__link:focus-visible {
 }
 
 .phone {
-  max-width: 500px;
+  min-width: 500px;
   font-family: inherit;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .phone:hover {
