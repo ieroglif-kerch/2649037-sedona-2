@@ -745,12 +745,13 @@ breadcrumbs__link:focus-visible {
 }
 
 .catalog__header .banner__title {
-  margin: 0 200px 0 0;
-  max-width: 400px;
+  margin: 0;
+  max-width: 500px;
 }
 
 .select__container {
   position: relative;
+  margin-left: auto;
 }
 
 .select__arrow {
@@ -800,7 +801,7 @@ breadcrumbs__link:focus-visible {
 
 .view__control__list {
   margin: 0;
-  margin-left: auto;
+  margin-left: 70px;
   padding: 0;
   max-width: 160px;
   display: flex;
